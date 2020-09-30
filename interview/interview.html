@@ -7,73 +7,534 @@
         <meta name="description" content=""><!--keywords/snippet for search engines-->
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
 
-        <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+   
 
         <style type="text/css">
 
-        img src= interview_image1.jpg alt= "hippie bikers"
-{ 
-        	width: 50%; 
-        }
+
+
         
         @font-face{
-         font-family: 'Alice', serif;
+         font-family: HostType1;
+         src: url('./font/BioRhyme-Regular.ttf');
     }
-    body{
 
-    	font-family: 'Alice', serif;
-    	
+    @font-face{
+    	font-family: HostType2;
+    	src: url( './font/BioRhyme-Light.ttf');
     }
+
+    @font-face{
+
+    	font-family: BigHeading;
+    	src: url( './font/LilitaOne-Regular.ttf');
+    }
+
+    @font-face{
+
+    	font-family: DateandTime;
+    	src: url('./font/Barlow-Medium.ttf');
+    }
+
+    @font-face{
+    	font-family:RUPAUL;
+    	src: url('./font/value-serif-medium-trial.otf');
+    }
+
+
+ 
+        	.host1{
+        		font-family:'DateandTime', serif;
+        		color: black;
+        		font-size: 15px;
+                text-align: left;
+
+
+        	}
+
+        	.host2{
+
+        		font-family: 'DateandTime', serif;
+        		color: black;
+        		font-size: 15px;
+        	}
+
+        	.interviewee{
+        		font-family: 'RUPAUL', serif;
+        		color: black;
+        		font-size: 14.5px;
+                text-align: left;
+
+
+
+        	}
+
+            .intervieweeintro{
+                font-family: 'RUPAUL', serif;
+                color: black;
+                font-size: 14.5px;
+                text-align: right;
+                margin: .75em;
+
+
+            }
+
+            body{
+                background-color: #dad8e6
+            }
+
+            p{
+                color: black;
+               
+            }
+        	
+
+        	h1{
+        		font-family: 'RUPAUL', serif;
+        		color: black;
+        		font-size:2.59vw;
+        		text-align: center;
+
+        		
+
+        	}
+
+        	h2{
+
+        		font-family: 'DateandTime', sans-serif;
+        		font-size: 25px;
+        	}
+
+        	h3{
+
+        		font-family: 'DateandTime',  sans-serif;
+        		font-size: 12px;
+        		text-transform: uppercase;
+        	}
+        	#david{
+
+
+        		background-color:white;
+                border:2px solid black;
+
+        		
+        		width: 75%;
+        		padding:10px;
+        		margin:10px auto 10px auto;
+                box-sizing: border-box;
+
+        	}
+
+        	#intro{
+
+        		width:75%;
+        		margin: auto;
+                box-sizing: border-box;
+        	}
+
+        	.gross{
+
+        		width:49%;
+        		border:2px solid black;
+        		background-color:white;
+        		padding: 10px;
+        		margin: 10px auto 10px 10px;
+
+        	}
+
+        	#soundbite{
+        		text-align:center;
+        		width:50%;
+        		padding: 10px;
+        		margin:10px auto 10px auto;
+        	}
+
+        	.ru{
+
+        		width:49%;
+        		border: 2px solid black;
+        		background-color:white;
+        		padding: 10px;
+        		margin: 10px 10px 10px auto;
+
+        	}
+
+            .host2intro{
+                font-family: 'DateandTime', serif;
+                color: black;
+                font-size: 15px;
+                margin:.5em;
+
+
+
+            }
+
+
+
+
 
 
         
 
 
-    }
 
 </style>
 
     </head>
     <body><!--all the contents of an HTML document goes here-->
+<div id="intro">
+	<h1>
+		RuPaul's Recipe For Success? Love Yourself And Stay Flexible
+	</h1>
 
-    	<h1>
-    		A history of happiness explains why capitalism makes us feel empty inside
-    	</h1>
+	<h3>
+		SEPTEMBER 4, 20201:21 PM ET  |  Heard on Fresh Air
+	</h3>
 
-    	<h2>
-    		Swedish researcher Carl Cederström on how corporations redefined happiness and turned hippies into Reagan voters.
-    	</h2>
-    	<img src= interview_image1.jpg alt= "hippie bikers" >
+	<h2>
+		In a March 2020 interview, the Emmy-nominated host of RuPaul's Drag Race said his drag look was "one-part Cher, two-parts David Bowie, one-part Diana Ross and two heaping spoonfuls of Dolly Parton."
+	</h2>
 
-    	<p>
-    		What is happiness?
-    	</p>
-    	 <p>
-    	 	It’s a very old question. And no one really knows the answer, although theories abound.
-    	 </p>
+    <img src="interviewimage1.jpg" width="950">
+</div>
 
-    	 <p>
-    	 	Aristotle was one of the first to offer what you might call a philosophy of happiness. For him, happiness consisted of being a good person, of living virtuously and not being a slave to one’s lowest impulses. Happiness was a goal, something at which humans constantly aim but never quite reach. Epicurus, another Greek philosopher who followed Aristotle, believed that happiness was found in the pursuit of simple pleasures.
-    	 </p>
+<div id="david">
 
-    	 <p>
-    	 	 The rise of Christianity in the West upended Greek notions of happiness. Hedonism and virtue-based morality fell somewhat out of favor, and suddenly the good life was all about sacrifice and the postponement of gratification. True happiness was now something to be attained in the afterlife, not on Earth.
-    	 </p>
+	<p class="host1">
+		DAVID BIANCULLI, HOST:
+	</p>
+	<p class= "host1">
+		This is FRESH AIR. I'm David Bianculli, in for Terry Gross. We're continuing our salute to some of this year's Emmy Award nominees by featuring group RuPaul, who is up for two Emmys as host and executive producer of "RuPaul's Drag Race" on VH1. He won in both categories last year. RuPaul became the most famous drag queen in the world after bringing drag into the mainstream with his reality competition series. It premiered in 2009 and completed its 12th season on VH1 this May. The series is now televised and popular in countries around the world.</p>
+	<p class= "host1">
+		Although the show is a competition, it's also a celebration of drag queens and drag culture. As we'll hear, for RuPaul, drag is a way to defy conformity and challenge preconceptions about gender, and that dates back to the 1980s, when he was performing in bands in Atlanta, dressing in a punk style of drag. Terry spoke to him in March.
+	</p>
 
-    	 <p>
-    	 	The Enlightenment and the rise of market capitalism transformed Western culture yet again. Individualism became the dominant ethos, with self-fulfillment and personal authenticity the highest goods. Happiness became a fundamental right, something to which we’re entitled as human beings.
-    	 </p>
-    	 <p>
-    	 	A new book entitled "The Happiness Fantasy by Carl Cederström", a business professor at Stockholm University, traces our current conception of happiness to its roots in modern psychiatry and the so-called Beat generation of the ‘50s and ‘60s. He argues that the values of the countercultural movement — liberation, freedom, and authenticity — were co-opted by corporations and advertisers, who used them to perpetuate a culture of consumption and production. And that hyper-individualistic culture actually makes us much less happy than we could be.
-    	 </p>
-    	 <p>
-    	 	I spoke to Cederström about how this happened and why he thinks happiness ought to be seen as a collective project that promotes deeper engagement with the world around us.
-    	 </p>
+</div>
 
-    	 <p>
-    	 	A lightly edited transcript of our conversation follows.
+<div id= "soundbite">
 
-    	 </p>
+	<h3>
+	(SOUNDBITE OF ARCHIVED NPR BROADCAST)
+	</h3>
+</div>
+
+<p class="host2intro">
+
+    TERRY GROSS
+
+</p>
+
+<div class= "gross">
+	<p class= "host2">
+
+		RuPaul, welcome to FRESH AIR. Thank you so much for being here. Your show is very entertaining, but it's also had a big impact on many people's lives. It's launched the career of dozens of drag queens, but it's also had a big impact on many viewers who feel affirmed by the show. Each episode ends with you saying - would you say it?
+
+	</p>
+</div>
+<div class= "gross">
+	<p class= "host2">
+		Each week, the two drag queens on the verge of elimination have a final chance to impress RuPaul in a lip sync competition or, as RuPaul puts it, lip sync for your life. The loser of the lip sync is eliminated and has to sashay away. Although the show is a competition, it's a celebration of drag queens and drag culture. As we'll hear, for RuPaul, drag is a way to defy conformity and challenge preconceptions about gender. And that dates back to the '80s, when he was performing in bands in Atlanta, dressing in a punk style of drag.
+	</p>
+</div>
+<div class= "gross">
+
+	<p class = "host2">
+		RuPaul, welcome to FRESH AIR. Thank you so much for being here. Your show is very entertaining, but it's also had a big impact on many people's lives. It's launched the career of dozens of drag queens, but it's also had a big impact on many viewers who feel affirmed by the show. Each episode ends with you saying - would you say it?
+	</p>
+</div>
+<p class= " intervieweeintro">
+    RUPAUL
+</p>
+<div class="ru">
+	<p class= "interviewee">
+		If you can't love yourself, how in the hell are you going to love somebody else?
+	</p>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+       Thank you. 
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+        It's a mantra. You need touchstones and totems. And actually, it's a tradition my mother passed on to me, which is having sayings that can help realign you in this life, a life with advertising that says you're not really clean unless your Zestfully (ph) clean.
+    </p>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+       (Laughter) I remember that one.
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+        It's absolutely ridiculous. But it plays...
+    </p>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+       Zest was a soap in case - for people who don't know, yes.
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+        Yes. But it plays on the insecurities that every human has, which is - are they going to like me? Do I smell? Do they not like me because I smell? So these mantras are set to align you with the truth of who you are, which is - you are love, and you cannot give something that you do not have.
+    </p>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+       I'd love to hear some more of the sayings that your mother passed on to you.
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+      Well, Mama had a lot of them. And one of hers was, I don't lend, I don't borrow, and I don't visit.
+
+    </p>
+</div>
+<div id= "soundbite">
+
+    <h3>
+    (LAUGHTER)
+    </h3>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+       Did she live by that saying?
+
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+      She absolutely did. She was not a social person. She was - she stayed to herself. You know, when her sisters would come to visit, she'd say, listen - y'all can come, but bring your own milk and sugar; I'll supply the coffee.
+    </p>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+       So I want to talk to you a little bit about being a businessman. Like, you've been very successful as a businessperson in addition to being successful as a performer. And in your early days performing, you had to promote yourself. How did you do it?
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+      By any means necessary. I would make posters, and we'd post them around Atlanta. Now, this is before the cities had skyping (ph). You know, when you see all the wheatpasted billboards around New York and LA and major cities, that's called skyping, by the way. And you would only see it in New York in the '80s, but I saw it in New York and brought it down to Atlanta. It had never been done in Atlanta before. So I would take wheatpaste - overnight, I would take a bunch of posters and wheatpaste them on phone posts and bus kiosk and all over midtown Atlanta. And then I would go out and promote myself in clubs and on public access television in Atlanta.
+    </p>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+       Oh, really?
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+      Yeah. I got my start in television 38 years ago on a show in Atlanta called "The American Music Show." And it was on public access. And public access, for you guys who don't know, when cable television came along, they used the telephone lines and underground cables that were public property, city property. So in order to get access to that, the cable companies had to allow certain channels on the cable box for the public.
+    </p>
+</div>
+<div class="ru">
+
+    <img src= "interviewimage5.jpg" width="620">
+    <p class= "interviewee">
+        Ru Paul 1989 on "The American Music Show."
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+      So these guys who were ex - these people who were about 12 years older than me, they had all met as volunteers to the McGovern campaign in Atlanta, and they continued their friendship, and then they created this television show called "The American Music Show." I saw it once, wrote into them and said, I love your show; I want to be on it. It was so irreverent and fun. They wrote - they actually called me and said, come on down. And that's how I really started my career in television 38 years ago. So...
+    </p>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+       What did you do your first time on that show?
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+      On that show - I had these friends of mine, these two girls. We called ourselves RuPaul and the U-Hauls.
+    </p>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+      (Laughter)
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+       And we came up with a dance routine to Junior Walker & the All Stars' song, hit song, "Shotgun." And that was the first appearance.
+    </p>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+      Shoot them before for they run.
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+       Yes. Yes.
+    </p>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+      (Laughter) What were you wearing?
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+       Some outfits that I had made (laughter). My mother taught me how to sew. And I, you know, sewed up some outfits for us. It's probably - this - that appearance is probably on YouTube right now. I mean, I won't watch it because it's still too soon to watch it.
+    </p>
+</div>
+
+<div id= "soundbite">
+
+    <h3>
+    (LAUGHTER)
+    </h3>
+</div>
+<div class= "gross">
+
+    <p class = "host2">
+      So what were those posters, those handmade posters like that you pasted all over town?
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+       You know, I've always loved advertising, and I love a good advertising campaign. So I would put together these campaigns. And one campaign was RuPaul is red hot. Ru Paul is everything. One campaign was, if you love me, give it to me, you know? And I collected slogans and sayings and imagery.
+    </p>
+</div>
+<div class= "gross">
+    <p class = "host2">
+      What did you think your future was going to be?
+    </p>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+       I - my - I thought my future would be - I'd be a star. I'd be a famous star. I didn't know how I would do that. In my mind, I thought, well, we'll start with - I'll be the next David Bowie, and that's where it started. But then as life unfolded, other things came up, and I said, oh, OK. You know, part of being a human on this planet is learning how to read the landscape, and I learned how to read the landscape. And drag presented itself to me, and I thought, well, OK, that's what I'll do.
+    </p>
+</div>
+<div class= "gross">
+    <p class = "host2">
+      So you said, drag presented itself to me. How did drag present itself?
+    </p>
+</div>   	
+<div class="ru">
+    <p class= "interviewee">
+       Well, I was in rock 'n' roll bands and punk rock bands and all that stuff. And we, as a ruse, just did drag for a performance, and the reaction I got from people was like none other. And I thought, oh, note to self - there's something here. And so that was the first time it presented itself to me. And, really, I understood that I had some real power there.
+    </p>
+</div>
+<div class= "gross">
+    <p class = "host2">
+      So when you started performing in Atlanta, were you in, like, music clubs or drag clubs?
+    </p>
+</div> 
+<div class="ru">
+    <p class= "interviewee">
+       No, we - it was always punk rock clubs and music clubs. Drag clubs - you know, I never really worked in drag clubs because we were punk rock. We were anti-establishment. Atlanta - back then and it may still be this way - was, like, mecca for drag. It had the traditional drag queens who were female impersonators. But, you know, I had come from the punk rock side of the tracks, and we did drag as a social comment, Terry. It was a reaction to the Reagan '80s. And it wasn't trying to look real or pass; it was a rebellion against the status quo. So we never really worked in the drag clubs. We did drag, but we did drag as a punk rock statement. So that's what that was.
+    </p>
+</div>
+<div class="ru">
+   <img src= "interviewimage3.jpg" width= "620">
+   <p class= "interviewee">
+   Rupaul Circa 1980
+</p> 
+</div>   
+<div class= "gross">
+    <p class = "host2">
+      So what was the transition from, you know, a kind of punk rock version of drag to the more glam version?
+    </p>
+</div> 
+<div class="ru">
+    <p class= "interviewee">
+       Well, rent had to be paid.
+    </p>
+</div>  
+<div id= "soundbite">
+
+    <h3>
+    (LAUGHTER)
+    </h3>
+</div>
+<div class="ru">
+    <p class= "interviewee">
+       Yes. That was the transition. And so went from that - moved to New York. And the way to make money was go-go dancing to host different club nights. So I decided, you know what? I'm going to shave my legs. I'm going to shave my chest, and I'm going to put some - roll some socks tightly into a bra, and I'm going to go out there and look like a "Soul Train" dancer. And it worked. And I start making money. And that was - that's where it went.
+    </p>
+</div>  
+<div class= "gross">
+    <p class = "host2">
+      Is that how you got into the "Love Shack" video?
+    </p>
+</div> 
+<div class="ru">
+    <p class= "interviewee">
+       Well, the "Love Shack" video - I knew The B-52's from Atlanta. You know, a lot of the kids in my group had sort of congregated on Atlanta because The B-52's had become very famous with their song "Rock Lobster" in 1980. And there's a huge group of young people in early 20s who I include in this group doing clubs and making art films and just being artistic, right?
+    </p>
+</div>  
+<div class="ru">
+    <p class= "interviewee">
+       So when we all moved to New York, they became aware of us because we had become a sensation down in the Village in New York. And they then asked me to be in their music video. And in that music - in the "Love Shack" music video, I had been up all night up in the club, and what I'm wearing in the video is what I had had on in the club (laughter) the night before. And of course, the video, it took all day to film that video. And so by the end of the day, I'd been up for, of course, 24 hours, which was not unusual for me.
+    </p>
+</div> 
+<div class= "gross">
+    <p class = "host2">
+      So correct me if I'm wrong, but I think your mother worked for Planned Parenthood,
+    </p>
+</div> 
+<div class="ru">
+    <p class= "interviewee">
+       Yes, she did. And after the divorce in '67, she sort of sat out in her room for about two years. And then - and my two older sisters sort of took over running the house. And then in 1970, she got a job, and she got a job at Planned Parenthood. And that was a huge breakthrough for her.
+    </p>
+</div> 
+<div class= "gross">
+    <p class = "host2">
+      Was she a counselor?
+    </p>
+</div> 
+<div class="ru">
+    <p class= "interviewee">
+       I think she started answering the phones, and then she did move on to counselling. And she was very proud of that job.
+    </p>
+</div> 
+<div class= "gross">
+    <p class = "host2">
+      Was she, like, very enlightened about sexuality and gender?
+    </p>
+</div> 
+<div class="ru">
+    <p class= "interviewee">
+       She was, but my mother was very world-weary. She was someone who I suspect - and she wasn't very open about anything in her childhood or her background, but I suspect that there was something - some horrible thing had happened to her. I could feel that. She never talked about it, but she was someone who, because of her world-weariness, she instilled in me the ability to not pay attention to what other people had to say about what I was doing. She loved me so much, and she was so proud of the fact that I was going to do my own thing.
+    </p>
+</div> 
+<div class="ru">
+    <p class= "interviewee">
+       So it was a very punk-rock approach to life, and I got that from her, which is - and she famously says, you know, if they ain't paying your bills, pay them no mind. And I live my life that way. And yes, I mean, people have said lots of nasty things about me, to me, and still do. But am I going to let that stop me? Nuh-uh (ph) (laughter). I will laugh at it and say, you know, the joke is on you, mama or child - not my mother. But the joke is on you, person, because I am going to get as much out of this life as I possibly can. And I have. I'm 59 years old. I have done a lot of stuff.
+    </p>
+</div> 
+<div class="ru">
+    <img src= "interviewimage6.jpeg" width= "620">
+    <p class= " interviewee">
+        Ru Paul photographed by Vogue Magazine May 2019
+    </p>
+</div> 
+
+
+<div class= "gross">
+    <p class = "host2">
+      (Laughter).
+    </p>
+</div> 
+<div class="ru">
+    <p class= "interviewee">
+      And I'm still going to do a lot of stuff.
+    </p>
+</div> 
+
 
     </body>
 </html>
