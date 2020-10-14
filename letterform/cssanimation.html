@@ -1,0 +1,483 @@
+<!DOCTYPE html><!--document type declaration-->
+<html>
+    <head><!-- a container for metadata -->
+        <meta charset="utf-8"><!--charset: character encoding capable of encoding all characters on the web  -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
+        <title> CSS Animation </title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
+        <meta name="description" content=""><!--keywords/snippet for search engines-->
+        <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+    
+        <style type="text/css">
+
+
+
+
+@keyframes colors{
+
+	0%, 100%{
+
+		background-color: white;
+
+
+	}
+
+	30%{
+		background-color: #ff00e6;
+	}
+	66%{ 
+		background-color:#7f03fc; }
+
+
+}
+
+@keyframes stretchs {
+
+	0%,100%{
+
+		transform: scaleX(1);
+	}
+
+	50%{
+
+		transform:scaleX(1.5);
+	}
+}
+
+
+
+@keyframes stretchss {
+
+	0%,100%{
+
+		transform: scaleX(1);
+	}
+
+	50%{
+
+		transform:scaleX(1.323);
+	}
+}
+
+
+@keyframes stretchesss{
+
+0%,  100%{
+
+	transform:scaleY(1);
+}
+
+50%{
+
+	transform:scaleY(1.25);}
+}
+
+@keyframes stretchessss{
+
+0%,  100%{
+
+	transform:scaleY(1);
+}
+
+50%{
+
+	transform:scaleY(2);
+}
+
+}
+@keyframes moves{
+
+	0%,100%{ transform:translate(0,0);
+
+
+	}
+
+	50%{ transform:translate(72px,0);
+
+	}
+}
+
+@keyframes movess{
+
+	0%, 100%{transform:translate(0,0); }
+
+		50%{ transform:translate(0,100px);}
+}
+
+        	body{
+
+        		background-color:black;
+
+        		margin-top:200px;
+
+        		margin-left:70px;
+
+        		transform-origin: center;
+
+        		transform:scale(.85);
+
+        		align-content:center;
+
+        	}
+
+
+        	.letter-b1{ 
+
+        	position: absolute;
+
+        	width:250px;
+        	height:350px;
+
+        	margin-top: -20px;
+        	margin-left:50px;
+        	
+
+  			transform: scale(.8);
+
+  			
+  
+
+
+        	}
+
+        	
+
+
+        	.letter-b2{
+
+        		position: relative;
+        		width:250px;
+        		height:350px;
+
+
+
+        		margin-top: -40px;
+        		margin-left: 350px;
+    
+        		transform: scale(.8) rotate(-180deg);
+        		
+
+        		
+        	}
+
+        	.letter-b2 :hover{
+
+
+        		
+        	}
+
+        	.letter-b3{
+
+        		position: absolute;
+        		width:250px;
+        		height: 350px;
+        		margin-top:30px;
+        		margin-left: 180px;
+        		transform: scale(1.55) rotate(90deg);
+        	}
+
+
+       
+
+
+        	.letter-b4{       
+
+
+        		position:absolute;
+				width:250px;
+				height:350px;
+				margin-top:-116px;
+				margin-left:850px;
+				transform:scale(2.025);
+				
+        	}
+
+        	.letter-b5{
+
+        		position: absolute;
+
+        		width:250px;
+        		height:350px;
+
+        		margin-top: -330px;
+        		margin-left:1400px;
+        		transform: scale(.95) rotate(180deg);
+        		
+
+
+        	}
+
+        	.letter-b6{
+
+        		position: absolute;
+
+        		width:250px;
+        		height:350px;
+
+        		margin-top: 50px;
+        		margin-left:1420px;
+        		
+        		
+        		transform: scale(.95);
+
+
+        	}
+
+        		
+
+
+        	
+
+        .b-stem{
+		position: absolute;
+		top: 000px;
+		left: 000px;
+		height: 320px;
+		width:  65px;
+		background-color: white;
+		transform-origin: top left;
+		animation: stretchesss 2s ease-in-out 2.5s 1 normal,
+				   colors 10s linear infinite alternate,
+				   stretchesss 2s ease-in-out 10.5s 1 normal,
+				   stretchesss 2s ease-in-out 18.5s 1 normal;
+	
+	
+	}
+
+	
+
+	.top-b{
+
+		position: absolute;
+		top: 000px;
+		left: 0px;
+		height: 65px;
+		width: 150px;
+		background-color: white;
+		border-radius: 0 40px 40px 0;
+		transform-origin: top left;
+		animation: stretchs 2s ease-in-out 5s 1 normal,
+				   colors 10s linear infinite alternate,
+				   stretchs 2s ease-in-out 13s 1 normal,
+				   stretchs 2s ease-in-out 21s 1 normal;
+
+
+		
+
+
+	}
+
+
+
+	.bottom-b{
+		position: absolute;
+		top: 260px;
+		left: 000px;
+		height: 65px;
+		width: 225px;
+		background-color: white;
+		border-radius: 0 0 40px 0;
+		transform-origin: top left;
+
+		animation: stretchss 2s ease-in-out  1 normal,
+
+				   movess 2s ease-in-out 2.5s 1 normal,
+
+				   colors 10s linear infinite alternate,
+
+
+				   stretchss 2s ease-in-out 8s  1 normal,
+
+				   movess 2s ease-in-out 10.5s 1 normal,
+
+				   
+				   stretchss 2s ease-in-out 16s  1 normal,
+
+				   movess 2s ease-in-out 18.5s 1 normal;
+
+				  
+
+
+
+	}
+
+	
+
+	.middle-b{
+		position: absolute;
+		top: 180px;
+		left: 000px;
+		height: 65px;
+		width: 140px;
+		background-color: white;
+		animation: colors 10s linear infinite alternate;
+		
+	}
+	
+
+	.left-b{
+
+		position: absolute;
+		top: 145px;
+		left: 080px;
+		height: 100px;
+		width:  65px;
+		background-color: white;
+		animation:colors 10s linear infinite alternate;
+
+
+	}
+
+	
+
+	.b-arc{
+		position: absolute;
+		top: 105px;
+		left: 080px;
+		height: 65px;
+		width: 145px;
+		background-color: white;
+		border-radius: 45px 40px 00;
+
+		transform-origin: top left;
+
+		animation: stretchs 2s ease-in-out  1 normal,
+				   colors 10s linear infinite alternate,
+				   stretchs 2s ease-in-out 8s  1 normal,
+				   stretchs 2s ease-in-out 16s  1 normal;
+
+
+
+	}
+
+	
+
+	.right-b{
+
+		position: absolute;
+		top: 145px;
+		left: 160px;
+		height: 120px;
+		width:  65px;
+		background-color: white;
+		transform-origin: top left;
+
+		animation: moves 2s ease-in-out  1 normal,
+				   stretchessss 2s ease-in-out 2.5s 1 normal,
+				   colors 10s linear infinite alternate,
+				   moves 2s ease-in-out 8s  1 normal,
+				   stretchessss 2s ease-in-out 10.5s 1 normal,
+				   moves 2s ease-in-out 16s  1 normal,
+				   stretchessss 2s ease-in-out 18.5s 1 normal;
+
+
+
+
+	}
+
+
+
+	
+
+</style>
+        	
+
+
+
+
+
+
+    </head>
+
+
+    <body>
+
+
+
+ <div class= "letter-b1">
+
+ 	<div class= "b-stem"></div>
+
+ 	<div class= "top-b"></div>
+
+ 	<div class= "bottom-b"></div>
+ 	<div class="middle-b"></div>
+ 	<div class="left-b"></div>
+ 	<div class="b-arc"></div>
+ 	<div class= " right-b"></div>
+
+ </div>
+
+ <div class = "letter-b2">
+
+	<div class= "b-stem"></div>
+	<div class= "top-b"></div>
+ 	<div class= "bottom-b"></div>
+ 	<div class="middle-b"></div>
+ 	<div class="left-b"></div>
+ 	<div class="b-arc"></div>
+ 	<div class= " right-b"></div>
+
+</div>
+
+<div class= "letter-b3"> 
+	<div class= "b-stem"></div>
+	<div class= "top-b"></div>
+ 	<div class= "bottom-b"></div>
+ 	<div class="middle-b"></div>
+ 	<div class="left-b"></div>
+ 	<div class="b-arc"></div>
+ 	<div class= " right-b"></div>
+
+</div>
+
+<div class="letter-b4">
+
+	<div class= "b-stem"></div>
+	<div class= "top-b"></div>
+ 	<div class= "bottom-b"></div>
+ 	<div class="middle-b"></div>
+ 	<div class="left-b"></div>
+ 	<div class="b-arc"></div>
+ 	<div class= " right-b"></div>
+
+ </div>
+
+ <div class="letter-b5">
+
+ 	<div class= "b-stem"></div>
+	<div class= "top-b"></div>
+ 	<div class= "bottom-b"></div>
+ 	<div class="middle-b"></div>
+ 	<div class="left-b"></div>
+ 	<div class="b-arc"></div>
+ 	<div class= " right-b"></div>
+
+ </div>
+
+<div class="letter-b6">
+
+ 	<div class= "b-stem"></div>
+	<div class= "top-b"></div>
+ 	<div class= "bottom-b"></div>
+ 	<div class="middle-b"></div>
+ 	<div class="left-b"></div>
+ 	<div class="b-arc"></div>
+ 	<div class= " right-b"></div>
+
+ </div>
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+    </body>
+</html>
