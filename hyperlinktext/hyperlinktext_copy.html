@@ -3,7 +3,9 @@
     <head><!-- a container for metadata -->
         <meta charset="utf-8"><!--charset: character encoding capable of encoding all characters on the web  -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
-        <title></title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
+        <title> 
+            The Play List
+        </title>
         <meta name="description" content=""><!--keywords/snippet for search engines-->
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
          <style type="text/css">
@@ -153,13 +155,23 @@
     @keyframes moves{
 
         0%{ transform:translate(0,0);}
-        100%{ transform:translate(0,100%); }
+        100%{ transform:translate(0,-79%); }
+    }
+
+    @keyframes expands{
+
+        0%{transform:height(8.5%);}
+        100%{transform:height(90%);}
     }
 
 
 
+
          body{
+            width:100%;
+            height:108%%;
          	background:#f7f7f7;
+            overflow:scroll;
          	
          }
 
@@ -194,6 +206,8 @@
             font-family: 'CirkaLight', serif; 
             animation:colorss 20s ease-in-out infinite normal;  
          }
+
+
           
 
 
@@ -209,10 +223,10 @@
            padding-bottom:34px;
          	width: 65%;
          	color: white;
-         	font-size: 25px;
+         	font-size: 2.5vw;
          	font-family:'CirkaLight',serif;
             background:white;
-            border-radius: 40px 40px 40px 40px;
+            
             animation:colorsss 20s ease-in-out infinite normal;
             text-align:center;  
 
@@ -235,11 +249,18 @@
    
          }
 
+         .song1:hover{
+
+            animation: moves 1.4s ease-in 1 normal running forwards;
+
+   
+         }
+
          .label{
 
          	position:relative;
          	margin-top:4%;
-         	margin-left:4%;
+         	margin-left:3%;
          	width:92%;
          	height:5%;
          	background-color:white;
@@ -252,7 +273,7 @@
          	position:relative;
          	margin-top:4%;
          	margin-left:1%;
-         	width:50%;
+         	width:100%;
          	height:6%;
          	color:black;
          	font-size:20px;
@@ -274,21 +295,27 @@
          	border-radius: 40px 40px 0px 0px;
          	overflow:scroll;
          	border:10px solid #8E92BA;
+            transition: all 2s ease-in;
+            
+            
 
          }
 
-         .song2:active{
-            animation: moves 3s ease-in 1 normal;
+         .song2:hover{
 
-
+            animation: moves 1.4s ease-in 1 normal running forwards;
          }
+         
+        
+
+        
 
          .labeltext2{
 
          	position:relative;
          	margin-top:4%;
          	margin-left:1%;
-         	width:50%;
+         	width:100%;
          	height:6%;
          	color:black;
          	font-size:20px;
@@ -307,18 +334,20 @@
          	background-color:#F2D59D;
          	border-radius: 40px 40px 0px 0px;
          	overflow:scroll;
-         	border:10px solid #F2D59D;
+         	border:10px solid #F2D59D;}
+
+        .song3:hover{
+
+            animation: moves 1.4s ease-in 1 normal running forwards;
+        }
 
 
-
-
-         }
          .labeltext3{
 
          	position:relative;
          	margin-top:4%;
          	margin-left:1%;
-         	width:50%;
+         	width:100%;
          	height:6%;
          	color:black;
          	font-size:20px;
@@ -337,18 +366,18 @@
          	background-color:#FF5F49;
          	border-radius: 40px 40px 0px 0px;
          	overflow:scroll;
-         	border:10px solid #FF5F49;
+         	border:10px solid #FF5F49;}
 
+        .song4:hover{
 
-
-
-         }
+            animation: moves 1.4s ease-in 1 normal running forwards;
+        }
          .labeltext4{
 
          	position:relative;
          	margin-top:4%;
          	margin-left:1%;
-         	width:50%;
+         	width:100%;
          	height:100%;
          	color:black;
          	font-size:20px;
@@ -373,12 +402,17 @@
 
          }
 
+         .song5:hover{
+
+            animation: moves 1.4s ease-in 1 normal running forwards;
+         }
+
            .labeltext5{
 
          	position:relative;
          	margin-top:4%;
          	margin-left:1%;
-         	width:50%;
+         	width:100%;
          	height:100%;
          	color:black;
          	font-size:20px;
@@ -399,16 +433,23 @@
          	overflow:scroll;
          	border:10px solid #D168BA;
 
-
-
          }
+
+         .song6:hover{
+
+            animation: moves 1.4s ease-in 1 normal running forwards;
+         }
+
+       
+
+        
 
           .labeltext6{
 
          	position:relative;
          	margin-top:4%;
          	margin-left:1%;
-         	width:50%;
+         	width:100%;
          	height:100%;
          	color:black;
          	font-size:20px;
@@ -424,7 +465,7 @@ display:inline-block;
 
          	float:left;
          	margin-top:3%;
-         	margin-left:4%;
+         	margin-left:3%;
          	padding-bottom:1%;
          	padding-left:1%;
          	width:50%;
@@ -433,6 +474,7 @@ display:inline-block;
          	background-color:white;
          	font-size:4vw;
          	font-family:SimulaItalic;
+            box-sizing:border-box;
          }
 
          .information{
@@ -442,16 +484,19 @@ position:absolute;
          	display:block;
          	
          	clear:left;
-         	margin-top:13.5%;
-         	margin-left:4%;
+         	margin-top:18vmin;
+         	margin-left:3%;
+            border-bottom:4%;
          	padding-top:1%;
          	padding-left:1%;
+            padding-right:1%;
          	width:50%;
-         	height:38%;
+         	height:39.5%;
          	color:black;
          	background-color:white;
-         	font-size:15px;
+         	font-size:1.14vw;
          	font-family:Simula;
+            box-sizing:border-box;
 
 
          }
@@ -472,7 +517,7 @@ position:absolute;
          	height:55%;
          	color:black;
          	background-color:white;
-         	font-size:28px;
+         	font-size:2.3vw;
          	font-family:SimulaItalic;
 
 
@@ -493,7 +538,7 @@ position:absolute;
          	height:55%;
          	color:black;
          	background-color:white;
-         	font-size:28px;
+         	font-size:2.2vw;
          	font-family:FrauncesBlack;
 
 
@@ -515,7 +560,7 @@ position:absolute;
          	height:55%;
          	color:black;
          	background-color:white;
-         	font-size:26px;
+         	font-size:2.4vw;
          	font-family:RecoletaLight;
 
 
@@ -537,7 +582,7 @@ position:absolute;
          	height:55%;
          	color:black;
          	background-color:white;
-         	font-size:24px;
+         	font-size:1.9vw;
          	font-family:GatwickBold;
 
 
@@ -559,7 +604,7 @@ position:absolute;
          	height:55%;
          	color:black;
          	background-color:white;
-         	font-size:24px;
+         	font-size:2vw;
          	font-family:Paprika;
 
 
@@ -581,7 +626,7 @@ position:absolute;
          	height:55%;
          	color:black;
          	background-color:white;
-         	font-size:24px;
+         	font-size:2vw;
          	font-family:Microgramma;
 
 
@@ -593,8 +638,8 @@ position:absolute;
          	box-sizing:border-box;
             display:inline-block;
          	
-         	margin-top:44%;
-            margin-left:-51%;
+         	margin-top:58vh;
+            margin-left:-50%;
          	
          	padding-top:1%;
          	padding-left:2%;
@@ -602,7 +647,7 @@ position:absolute;
          	height:200%;
          	color:black;
          	background-color:white;
-         	font-size:20px;
+         	font-size:1.62vw;
          	font-family:SimulaItalic;
          	
 
@@ -615,7 +660,7 @@ position:absolute;
          	box-sizing:border-box;
             display:inline-block;
          	
-         	margin-top:44%;
+         	margin-top:58vh;
             margin-left:-51%;
          	
          	padding-top:1%;
@@ -624,7 +669,7 @@ position:absolute;
          	height:264%;
          	color:black;
          	background-color:white;
-         	font-size:20px;
+         	font-size:1.6vw;
          	font-family:FrauncesBlack;
          	
 
@@ -637,7 +682,7 @@ position:absolute;
          	box-sizing:border-box;
             display:inline-block;
          	
-         	margin-top:44%;
+         	margin-top:58vh;
             margin-left:-51%;
          	
          	padding-top:1%;
@@ -646,7 +691,7 @@ position:absolute;
          	height:232%;
          	color:black;
          	background-color:white;
-         	font-size:20px;
+         	font-size:1.62vw;
          	font-family:RecoletaLight;
          	
 
@@ -658,7 +703,7 @@ position:absolute;
          	box-sizing:border-box;
             display:inline-block;
          	
-         	margin-top:44%;
+         	margin-top:58vh;
             margin-left:-51%;
          	
          	padding-top:1%;
@@ -667,7 +712,7 @@ position:absolute;
          	height:260%;
          	color:black;
          	background-color:white;
-         	font-size:20px;
+         	font-size:1.6vw;
          	font-family:GatwickBold;
          	
 
@@ -680,7 +725,7 @@ position:absolute;
          	box-sizing:border-box;
             display:inline-block;
          	
-         	margin-top:44%;
+         	margin-top:58vh;
             margin-left:-51%;
          	
          	padding-top:1%;
@@ -689,7 +734,7 @@ position:absolute;
          	height:236%;
          	color:black;
          	background-color:white;
-         	font-size:20px;
+         	font-size:1.6vw;
          	font-family:Paprika;
          	
 
@@ -701,7 +746,7 @@ position:absolute;
          	box-sizing:border-box;
             display:inline-block;
          	
-         	margin-top:44%;
+         	margin-top:58vh;
             margin-left:-51%;
          	
          	padding-top:1%;
@@ -710,7 +755,7 @@ position:absolute;
          	height:180%;
          	color:black;
          	background-color:white;
-         	font-size:20px;
+         	font-size:1.55vw;
          	font-family:Microgramma;
          	
 
@@ -726,7 +771,7 @@ display:inline-block;
 
          	float:left;
          	margin-top:3%;
-         	margin-left:4%;
+         	margin-left:3%;
          	padding-bottom:1%;
          	padding-left:1%;
          	width:50%;
@@ -746,7 +791,7 @@ display:inline-block;
 
          	float:left;
          	margin-top:3%;
-         	margin-left:4%;
+         	margin-left:3%;
          	padding-bottom:1%;
          	padding-left:1%;
          	width:50%;
@@ -766,7 +811,7 @@ display:inline-block;
 
          	float:left;
          	margin-top:3%;
-         	margin-left:4%;
+         	margin-left:3%;
          	padding-bottom:1%;
          	padding-left:1%;
          	width:50%;
@@ -786,7 +831,7 @@ display:inline-block;
 
          	float:left;
          	margin-top:3%;
-         	margin-left:4%;
+         	margin-left:3%;
          	padding-bottom:1%;
          	padding-left:1%;
          	width:50%;
@@ -805,7 +850,7 @@ display:inline-block;
 
          	float:left;
          	margin-top:3%;
-         	margin-left:4%;
+         	margin-left:3%;
          	padding-bottom:1%;
          	padding-left:1%;
          	width:50%;
@@ -837,9 +882,9 @@ display:inline-block;
     	The Play List 
 
     </div>
-    <div id="playbutton">
-        >>
-    </div>
+   <div id="playbutton">
+    >>
+</div>
     <div class="about">
 
     	This website is an effort to catalogue the ephemerality of the “most-listened-to songs” on my personal music collection during the isolation and confinement of quarentine. This period allowed me to explore with new artists, and further uncover the music of my favorite artists. A visual and auditory representation of a playlist is what follows. Press the play button to start.
@@ -925,10 +970,13 @@ Makes me runnin' away, runnin' away, runnin' away
     	</div>
     </div>
 
-    <div class="song2">
+    <div class="song2 ">
 
     	<div class="label">
     		<div class="labeltext2">
+                <audio controls id = "saba">
+                 <source src="Netflix&Dusse.mp3" type="audio/mp3">
+                </audio>
 
     			Netflix and Dusse - Smino  >> 
     		</div>
@@ -1037,6 +1085,9 @@ Yah-ga-da-be-da-mm
 
     	<div class="label">
     		<div class="labeltext3">
+                 <audio controls id = "saba">
+                 <source src="Love Me Right.mp3" type="audio/mp3">
+                </audio>
 
     			Love Me Right - Amber Mark  >> 
     		</div>
@@ -1120,6 +1171,9 @@ Love, love me, love me right
 
     	<div class="label">
     		<div class="labeltext4">
+                <audio controls id = "saba">
+                 <source src="JEWELZ.mp3" type="audio/mp3">
+                </audio>
 
     			Jewelz - Anderson .Pak  >> 
     		</div>
@@ -1230,6 +1284,9 @@ Back off, give us some space, come on get in the car buddy, come on
 
     	<div class="label">
     		<div class="labeltext5">
+                <audio controls id = "saba">
+                 <source src="The Recipe.mp3" type="audio/mp3">
+                </audio>
 
     			The Recipe - SiR  >> 
     		</div>
@@ -1311,6 +1368,9 @@ Let it go, let it go, let it
 
     	<div class="label">
     		<div class="labeltext6">
+                 <audio controls id = "saba">
+                 <source src="Decided.mp3" type="audio/mp3">
+                </audio>
 
     			Decided - Odunsi  >> 
     		</div>
@@ -1422,12 +1482,13 @@ Need to go deeper
 
   $("#labeltext1").click(function() {
 
-
-
-
   }
 
-           
+  document.getElementById('playbutton').addEventListener('click', function() {
+  document.querySelector('.song2').classList.add('song2transform-active');
+});
+
+  
         
     </script>
     
