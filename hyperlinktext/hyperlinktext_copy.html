@@ -6,8 +6,7 @@
         <title> 
             The Play List
         </title>
-        <meta name="description" content=""><
-        Playlist
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -200,7 +199,7 @@
 
          .musicpanel-slide-down{
 
-            transform: translateY(0vh);
+            transform: translateY(40vh);
 
 
          }
@@ -1659,6 +1658,15 @@ Need to go deeper
           //multiple actions can be here
           $('.backhome').toggleClass('backhomehide');
         });
+
+          $('.backhome').click(function(){
+          	setTimeout(function(){
+          	$('.backhome').toggleClass('backhomehide');
+          location.reload(true);}, 2000);
+         
+        });
+
+
 
          $('.song1').hover(function(){
 
