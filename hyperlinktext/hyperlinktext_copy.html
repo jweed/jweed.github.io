@@ -1,0 +1,1922 @@
+<!DOCTYPE html><!--document type declaration-->
+<html>
+    <head><!-- a container for metadata -->
+        <meta charset="utf-8"><!--charset: character encoding capable of encoding all characters on the web  -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
+        <title> 
+            The Play List
+        </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        
+         <style type="text/css">
+
+         @font-face{
+    	font-family: FrauncesThin;
+    	src: url( './fonts/Fraunces144ptS050-Thin.ttf');
+    }
+
+    @font-face{
+    	font-family: CirkaLight;
+    	src: url( './fonts/Cirka-Light.otf');
+    }
+
+    @font-face{
+    	font-family: SimulaItalic;
+    	src: url( './fonts/Simula-BookItalic.otf');
+
+
+    }
+
+    @font-face{
+
+    	font-family: FrauncesBlack;
+    	src:url('./fonts/CheeeDemo-Wowie.otf');
+    }
+
+    @font-face{
+
+    	font-family:RecoletaLight;
+    	src: url('./fonts/Recoleta-Light.ttf');
+    }
+
+    @font-face{
+
+    	font-family:GatwickBold;
+    	src:url('./fonts/Gatwick-Bold.otf');
+    }
+
+    @font-face{
+
+    	font-family:Paprika;
+    	src:url('./fonts/Paprika-Regular.ttf');
+    }
+
+    @font-face{
+
+    	font-family:Microgramma;
+    	src: url('./fonts/Microgramma D Extended Medium.otf');
+    }
+
+    @font-face{
+
+    	font-family:Simula;
+    	src:url('./fonts/Simula-Book.ttf');
+    }
+
+    @keyframes colors{
+
+    	0%,100%{
+
+    		background-color:white;
+    	}
+
+    	25%{ background-color:#e6e6e6;
+
+
+    	}
+
+    	50%{ background-color:#dadbe3;
+
+
+    	}
+
+    	
+
+    	75%{background-color:#e3dfda;
+
+
+    	}
+    }
+
+     @keyframes colorss{
+
+        0%,100%{
+
+            color:#24343C;
+        }
+
+        16.5%{ color:#8E92BA;
+
+
+        }
+
+        33%{ color:#F2D59D;
+
+
+        }
+
+        
+
+        49.5%{color:#FF5F49;
+
+
+        }
+
+        66%{color:#3B8FB2;
+
+
+        }
+
+        82.5%{color:#D168BA;}
+    }
+
+    @keyframes colorsss{
+
+        0%,100%{
+
+            background-color:#24343C;
+        }
+
+        16.5%{ background-color:#8E92BA;
+
+
+        }
+
+        33%{ background-color:#F2D59D;
+
+
+        }
+
+        
+
+        49.5%{background-color:#FF5F49;
+
+
+        }
+
+        66%{background-color:#3B8FB2;
+
+
+        }
+
+        82.5%{background-color:#D168BA;}
+    }
+
+    @keyframes moves{
+
+        0%{ transform:translate(0,0);}
+        100%{ transform:translate(0,-79%); }
+    }
+
+    @keyframes expands{
+
+        0%{transform:height(8.5%);}
+        100%{transform:height(90%);}
+    }
+
+
+
+
+         body{
+            
+            height:100vh;
+            width: 100vw;
+         	background:#f7f7f7;
+            overflow:hidden;
+         	
+         }
+
+         .musicpanel{
+
+            position:absolute;
+
+            width:100vw;
+            height:100vh;
+            transform: translateY(40vh);
+            transition: all ease-in 1.6s;
+         }
+
+         .musicpanel-slide{
+
+            transform: translateY(-92.5vh);
+
+
+         }
+
+         .musicpanel-slide-down{
+
+            transform: translateY(40vh);
+
+
+         }
+
+
+         #title{
+            display:inline;
+
+         	position:absolute;
+         	margin-top: 5%;
+         	margin-left:20%;
+
+         	width:66%;
+         	height:20%;
+         	color: #24343C;
+         	font-size:10vw;
+         	font-family: 'CirkaLight', serif; 
+            
+         }
+
+
+         #playbutton{
+             display:inline;
+
+            position:absolute;
+            margin-top: 5%;
+            margin-left:73%;
+
+            width:66%;
+            height:20%;
+            color: black;
+            font-size:10vw;
+            font-family: 'CirkaLight', serif; 
+            animation:colorss 20s ease-in-out infinite normal;  
+         }
+
+
+          
+
+
+
+         .about{
+
+         	position:absolute;
+         	margin-top: 26%;
+         	margin-left:15%;
+           padding-top:20px;
+           padding-left:20px;
+           padding-right:20px;
+           padding-bottom:34px;
+         	width: 65%;
+         	color: white;
+         	font-size: 2.5vw;
+         	font-family:'CirkaLight',serif;
+            background:white;
+            
+            animation:colorsss 20s ease-in-out infinite normal;
+            text-align:center;  
+
+         }
+
+         .directions{
+
+            display:none;
+
+
+            position:absolute;
+            margin-top: 1vh;
+            margin-left: 25vw;
+            width: 50%;
+            color:#24343C;
+            font-size: 2.5vw;
+            font-family:'CirkaLight',serif;
+            text-align:center; 
+            transition: all  1s ease-in;
+         }
+
+         .directionscolor1{
+
+            display:block;
+
+            color:#24343C;
+         }
+
+         .directionscolor2{
+            display:block;
+
+            color:#8E92BA;  
+         }
+         .directionscolor3{
+            display:block;
+
+            color:#F2D59D;
+            
+         }
+
+         .directionscolor4{
+            display:block;
+
+            color:#FF5F49;
+
+            
+         }
+         .directionscolor5{
+            display:block;
+
+            color:#3B8FB2;
+
+            }
+
+         .directionscolor6{
+            display:block;
+
+            color:#D168BA;
+}
+
+        .backhome{
+            opacity:0;
+            position:absolute;
+            margin-top: 90vh;
+            margin-left: 0vw;
+            width: 10%;
+            color:#24343C;
+            font-size: 2vw;
+            font-family:'CirkaLight',serif;
+            text-align:center; 
+            transition: all  1s 1s ease-in;
+
+
+        }
+        .backhomeappear{
+
+            opacity:1;
+        }
+
+        .backhomehide{
+
+            opacity:0;
+        }
+
+
+
+
+
+
+
+
+         .song1{
+
+         	position:absolute;
+         	margin-top:57%;
+         	margin-left:11%;
+         	width:75%;
+         	height:90%;
+         	background-color:#262626;
+         	border-radius: 40px 40px 0px 0px;
+         	overflow:scroll;
+         	border:10px solid #262626;
+
+   
+         }
+
+         
+
+         .label{
+
+         	position:relative;
+         	margin-top:4%;
+         	margin-left:3%;
+         	width:92%;
+         	height:5%;
+         	background-color:white;
+
+
+         }
+
+         #labeltext1{
+
+         	position:relative;
+         	margin-top:4%;
+         	margin-left:1%;
+         	width:100%;
+         	height:6%;
+         	color:black;
+         	font-size:140%;
+         	font-family:SimulaItalic;
+
+
+
+         }
+
+
+         .song2{
+
+         	position:absolute;
+         	margin-top:65.5%;
+         	margin-left:11%;
+         	width:75%;
+         	height:90%;
+         	background-color:#8E92BA;
+         	border-radius: 40px 40px 0px 0px;
+         	overflow:scroll;
+         	border:10px solid #8E92BA;
+            transform:translateY(0vh);
+            transition: all 1s ease-in;
+            
+            
+
+         }
+
+         .song2moves{
+
+            transform:translateY(66vh);
+
+
+         }
+
+         .song2movesup{
+
+            transform:translateY(-14vh);
+         }
+
+         
+        
+
+        
+
+         .labeltext2{
+
+         	position:relative;
+         	margin-top:4%;
+         	margin-left:1%;
+         	width:100%;
+         	height:6%;
+         	color:black;
+         	font-size:140%;
+         	font-family:FrauncesBlack;
+
+
+         }
+
+         .song3{
+
+         	position:absolute;
+         	margin-top:74%;
+         	margin-left:11%;
+         	width:75%;
+         	height:90%;
+         	background-color:#F2D59D;
+         	border-radius: 40px 40px 0px 0px;
+         	overflow:scroll;
+         	border:10px solid #F2D59D;
+            transform:translateY(0vh);
+            transition: all 1s ease-in;
+            }
+
+        .song3moves{
+             transform:translateY(52vh);
+
+
+        }
+
+        .song3movesup{
+
+
+            transform:translateY(-28vh);
+        }
+
+
+         .labeltext3{
+
+         	position:relative;
+         	margin-top:4%;
+         	margin-left:1%;
+         	width:100%;
+         	height:6%;
+         	color:black;
+         	font-size:140%;
+         	font-family:RecoletaLight;
+
+
+         }
+
+         .song4{
+
+         	position:absolute;
+         	margin-top:82.5%;
+         	margin-left:11%;
+         	width:75%;
+         	height:90%;
+         	background-color:#FF5F49;
+         	border-radius: 40px 40px 0px 0px;
+         	overflow:scroll;
+         	border:10px solid #FF5F49;
+            transform:translateY(0vh);
+            transition: all 1s ease-in;
+            
+         }
+
+        .song4moves{
+            transform:translateY(38vh);
+
+        }
+
+        .song4movesup{
+            transform:translateY(-42vh);
+
+        }
+         .labeltext4{
+
+         	position:relative;
+         	margin-top:4%;
+         	margin-left:1%;
+         	width:100%;
+         	height:100%;
+         	color:black;
+         	font-size:140%;
+         	font-family:GatwickBold;
+
+
+         }
+
+          
+
+         .song5{
+
+         	position:absolute;
+         	margin-top:91%;
+         	margin-left:11%;
+         	width:75%;
+         	height:90%;
+         	background-color:#3B8FB2;
+         	border-radius: 40px 40px 0px 0px;
+         	overflow:scroll;
+         	border:10px solid #3B8FB2;
+            transform:translateY(0vh);
+            transition: all 1s ease-in;
+            
+
+         }
+
+         .song5moves{
+            transform:translateY(24vh);
+
+         }
+
+         .song5movesup{
+            transform:translateY(-56vh);
+
+         }
+
+
+
+           .labeltext5{
+
+         	position:relative;
+         	margin-top:4%;
+         	margin-left:1%;
+         	width:100%;
+         	height:100%;
+         	color:black;
+         	font-size:140%;
+         	font-family:Paprika;
+
+
+         }
+
+         .song6{
+
+         	position:absolute;
+         	margin-top:99.5%;
+         	margin-left:11%;
+         	width:75%;
+         	height:90%;
+         	background-color:#D168BA;
+         	border-radius: 40px 40px 0px 0px;
+         	overflow:scroll;
+         	border:10px solid #D168BA;
+            transform:translateY(0vh);
+            transition:all 1s ease-in;
+
+         }
+
+         .song6moves{
+
+            transform:translateY(10vh);
+         }
+
+         .song6movesup{
+
+            transform:translateY(-70vh);
+         }
+
+
+       
+
+        
+
+          .labeltext6{
+
+         	position:relative;
+         	margin-top:4%;
+         	margin-left:1%;
+         	width:100%;
+         	height:100%;
+         	color:black;
+         	font-size:140%;
+         	font-family:Microgramma;
+
+
+         }
+
+         .title1{
+         	position:absolute;
+display:inline-block;
+         	position:relative;
+
+         	float:left;
+         	margin-top:3%;
+         	margin-left:3%;
+         	padding-bottom:1%;
+         	padding-left:1%;
+         	width:50%;
+         	height:10%;
+         	color:black;
+         	background-color:white;
+         	font-size:300%;
+         	font-family:SimulaItalic;
+            box-sizing:border-box;
+         }
+
+         .information{
+position:absolute;
+       display:inline-block;
+         	
+         	display:block;
+         	
+         	clear:left;
+         	margin-top:18vmin;
+         	margin-left:3%;
+            border-bottom:4%;
+         	padding-top:1%;
+         	padding-left:1%;
+            padding-right:1%;
+         	width:50%;
+         	height:39.5%;
+         	color:black;
+         	background-color:white;
+         	font-size:91%;
+         	font-family:Simula;
+            box-sizing:border-box;
+
+
+         }
+
+         .quote1{
+
+         	
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:3%;
+            margin-left:3%;
+         	
+         	padding-top:0%;
+         	padding-left:2%;
+         	width:38%;
+         	height:55%;
+         	color:black;
+         	background-color:white;
+         	font-size:180%;
+         	font-family:SimulaItalic;
+
+
+         }
+          .quote2{
+
+         	
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:3%;
+            margin-left:3%;
+         	
+         	padding-top:2%;
+         	padding-left:2%;
+            padding-right:1%;
+         	width:38%;
+         	height:55%;
+         	color:black;
+         	background-color:white;
+         	font-size:170%;
+         	font-family:FrauncesBlack;
+
+
+         }
+
+         .quote3{
+
+         	
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:3%;
+            margin-left:3%;
+         	
+         	padding-top:1%;
+         	padding-left:2%;
+         	width:38%;
+         	height:55%;
+         	color:black;
+         	background-color:white;
+         	font-size:180%;
+         	font-family:RecoletaLight;
+
+
+         }
+
+         .quote4{
+
+         	
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:3%;
+            margin-left:3%;
+         	
+         	padding-top:2%;
+         	padding-left:2%;
+            padding-right:2%;
+         	width:38%;
+         	height:55%;
+         	color:black;
+         	background-color:white;
+         	font-size:140%;
+         	font-family:GatwickBold;
+
+
+         }
+
+         .quote5{
+
+         	
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:3%;
+            margin-left:3%;
+         	
+         	padding-top:2%;
+         	padding-left:2%;
+            padding-right:1%;
+         	width:38%;
+         	height:55%;
+         	color:black;
+         	background-color:white;
+         	font-size:160%;
+         	font-family:Paprika;
+
+
+         }
+
+         .quote6{
+
+         	
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:3%;
+            margin-left:3%;
+         	
+         	padding-top:1%;
+         	padding-left:2%;
+            padding-right:1%;
+         	width:38%;
+         	height:55%;
+         	color:black;
+         	background-color:white;
+         	font-size:160%;
+         	font-family:Microgramma;
+
+
+         }
+
+         .lyrics1{
+
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:58vh;
+            margin-left:-50%;
+            margin-bottom:5%;
+         	
+         	padding-top:1%;
+         	padding-left:2%;
+         	width:92%;
+         	height:200%;
+         	color:black;
+         	background-color:white;
+         	font-size:130%;
+         	font-family:SimulaItalic;
+         	
+
+
+         }
+
+         .lyrics2{
+
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:58vh;
+            margin-left:-51%;
+            margin-bottom:5%;
+         	
+         	padding-top:1%;
+         	padding-left:2%;
+         	width:92%;
+         	height:264%;
+         	color:black;
+         	background-color:white;
+         	font-size:128%;
+         	font-family:FrauncesBlack;
+         	
+
+
+         }
+
+         .lyrics3{
+
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:58vh;
+            margin-left:-51%;
+         	margin-bottom:5%;
+         	padding-top:1%;
+         	padding-left:2%;
+         	width:92%;
+         	height:232%;
+         	color:black;
+         	background-color:white;
+         	font-size:130%;
+         	font-family:RecoletaLight;
+         	
+
+
+         }
+         .lyrics4{
+
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:58vh;
+            margin-left:-51%;
+         	margin-bottom: 5%;
+         	padding-top:1%;
+         	padding-left:2%;
+         	width:92%;
+         	height:260%;
+         	color:black;
+         	background-color:white;
+         	font-size:128%;
+         	font-family:GatwickBold;
+         	
+
+
+         }
+
+         .lyrics5{
+
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:58vh;
+            margin-left:-51%;
+         	margin-bottom:2%;
+         	padding-top:1%;
+         	padding-left:2%;
+         	width:92%;
+         	height:236%;
+         	color:black;
+         	background-color:white;
+         	font-size:128%;
+         	font-family:Paprika;
+         	
+
+
+         }
+         .lyrics6{
+
+         	position:absolute;
+         	box-sizing:border-box;
+            display:inline-block;
+         	
+         	margin-top:58vh;
+            margin-left:-51%;
+         	margin-bottom: 5%;
+         	padding-top:1%;
+         	padding-left:2%;
+         	width:92%;
+         	height:180%;
+         	color:black;
+         	background-color:white;
+         	font-size:120%;
+         	font-family:Microgramma;
+         	
+
+
+         }
+
+
+
+         .title2{
+         	position:absolute;
+            display:inline-block;
+         	position:relative;
+      
+
+         	float:left;
+         	margin-top:3%;
+         	margin-left:3%;
+            padding-top:1%;
+         	padding-left:1%;
+            box-sizing: border-box;
+         	width:50%;
+         	height:10%;
+         	color:black;
+         	background-color:white;
+         	font-size:280%;
+         	font-family:FrauncesBlack;
+
+
+         }
+
+         .title3{
+         	position:absolute;
+            display:inline-block;
+         	position:relative;
+
+         	float:left;
+         	margin-top:3%;
+         	margin-left:3%;
+         	padding-bottom:1%;
+         	padding-left:1%;
+         	width:50%;
+         	height:10%;
+         	color:black;
+         	background-color:white;
+         	font-size:300%;
+         	font-family:RecoletaLight;
+
+
+         }
+
+         .title4{
+         	position:absolute;
+            display:inline-block;
+         	position:relative;
+
+         	float:left;
+         	margin-top:3%;
+         	margin-left:3%;
+         	padding-bottom:1%;
+         	padding-left:1%;
+         	width:50%;
+         	height:10%;
+         	color:black;
+         	background-color:white;
+         	font-size:400%;
+         	font-family:GatwickBold;
+
+
+         }
+
+         .title5{
+         	position:absolute;
+            display:inline-block;
+         	position:relative;
+
+         	float:left;
+         	margin-top:3%;
+         	margin-left:3%;
+         	padding-bottom:1%;
+         	padding-left:1%;
+         	width:50%;
+         	height:10%;
+         	color:black;
+         	background-color:white;
+         	font-size:300%;
+         	font-family:Paprika;
+
+
+         }
+        .title6{
+         	position:absolute;
+            display:inline-block;
+         	position:relative;
+
+         	float:left;
+         	margin-top:3%;
+         	margin-left:3%;
+         	padding-bottom:1%;
+         	padding-left:1%;
+         	width:50%;
+         	height:10%;
+         	color:black;
+         	background-color:white;
+         	font-size:340%;
+         	font-family:Microgramma;
+
+
+         }
+
+         audio#saba{
+            position: absolute;
+              top: -5px;
+              left: -5px;
+              z-index: 2;
+              opacity: 0.01;
+                     }
+
+
+         </style>
+
+
+    </head>
+    <body>
+
+    <div class="directions">
+
+    Click Title to Play Song
+
+    </div>
+    <div id="title">
+
+    	The Play List 
+
+    </div>
+   <div id="playbutton">
+    >>
+</div>
+    <div class="about">
+
+    	This website is an effort to catalogue the ephemerality of the “most-listened-to songs” on my personal music collection during the isolation and confinement of quarentine. This period allowed me to explore with new artists, and further uncover the music of my favorite artists. A visual and auditory representation of a playlist is what follows. Press the play button to start.
+    </div>
+    <div class="backhome">
+
+        << Home
+
+    </div>
+
+    <div class="musicpanel">
+
+    <div class="song1">
+
+    	<div class="label">
+    		<div id="labeltext1">
+                <audio controls id = "saba">
+                 <source src="Calligraphy.mp3" type="audio/mp3">
+                </audio>
+
+    			Calligraphy - Saba  >> 
+    		</div>
+
+    	</div>
+    	<div class="title1">
+
+    	Calligraphy
+
+    	</div>
+
+    	<div class="information">
+    		In his new album CARE FOR ME, the 23-year old rapper Saba paints a deeply personal picture of his life growing up in the West Side of Chicago. Following his debut album, Bucket List Project, Saba again explores the themes of mortality, but this time while having to reconcile the loss of his cousin Walter, one of his closest friends and collaborators. Walter was fatally stabbed last February, less than a month before Saba began touring for his debut album. Heartbreakingly raw, CARE FOR ME reflects on the grief Saba has faced and like the title states, addresses the self-care he needs to move forward. CALLIGRAPHY, the fourth track of the album, captures the role that music and writing has played in his journey. Instead of running away from his reality, Saba uses writing and music as a way to confront the experiences he’s had to face.
+    	</div>
+    	<div class= "quote1">
+
+    	 <p> Write it away, write it away</p>
+         <p> I just got tired of runnin' away, runnin' away</p>
+         <p> Everyone leavin', I write 'em away, write 'em away</p>
+          <p>Calligraphy</p>
+    	</div>
+
+    	<div class="lyrics1">
+    		I don't tell the truth so y'all don't feel sorry for me <br>
+I don't write this shit so y'all will feel God comin'<br>
+I don't get down like that road<br>
+The amount of rappers on a mission to find some, calligraphy<br>
+Needed to feel, move to the beat of my drum<br>
+Why don't we kick in the snare? Waken a bear<br>
+All of the fucked up shit that we been through' I got keeping us here<br>
+We be aware, but only timing will tell<br>
+When you will find all your letters, calligraphy<br>
+Write it away, write it away<br>
+I just got tired of runnin' away, runnin' away<br>
+Everyone leaving, I write 'em away, write 'em away<br>
+Calligraphy<br>
+Write it away, write it away<br>
+I just got tired of runnin' away, runnin' away<br>
+Everyone leaving', I write 'em away, write 'em away<br>
+Calligraphy<br>
+I'm not mad at God, I just can't get out of bed<br>
+My best friend obituary really hang on my wall, by the dresser<br>
+I'm tryna see it a life lesson<br>
+No more time for morning' on my schedule<br>
+I see the right list, calligraphy<br>
+Readin' the signs like I'm a highway driver<br>
+I just hit Blaise Blaise, hieroglyphics<br>
+I see the wall that they write in, I build a wall up in my head<br>
+Autopilot what it felt like I was on<br>
+I sent the word out flying, calligraphy<br>
+Write it away, write it away<br>
+I just got tired of runnin' away, runnin' away<br>
+Everyone leavin', I write 'em away, write 'em away<br>
+Calligraphy<br>
+Write it away, write it away<br>
+I just got tired of runnin' away, runnin' away<br>
+Everyone leavin', I write 'em away, write 'em away<br>
+Calligraphy<br>
+Run, run, run, run, run, run, run, run<br>
+Run, run, run, run, run, run, run, run<br>
+Run, run, run, run, run, run, run, run<br>
+Run, run, run, run, run, run, run, run<br>
+Run, run, run, run, run, run, run, run<br>
+Run, run, run, run, run, run, run, run<br>
+Run, run, run, run, run, run, run, run<br>
+Run, run, run, run, run, run, run, run<br>
+I can't get out of it, I'm not mad at God<br>
+But I can't get out of bed<br>
+Makes me runnin' away, runnin' away, runnin' away
+
+    	</div>
+    </div>
+
+    <div class="song2 ">
+
+    	<div class="label">
+    		<div class="labeltext2">
+                <audio controls id = "saba">
+                 <source src="Netflix&Dusse.mp3" type="audio/mp3">
+                </audio>
+
+    			Netflix and Dusse - Smino  >> 
+    		</div>
+
+    	</div>
+
+    	<div class="title2">
+
+    	Netflix and Dusse
+
+    	</div>
+
+    	<div class="information">
+    		St. Louis-born Smino pours his dense, melodic rapping style into funk- and soul-influenced songs. blkswn follows the release of 2016’s blkjuptr and features stream-of-consciousness raps, rich harmonies, and delightful hooks..The black swan theory or theory of black swan events is a metaphor that describes an event that comes as a surprise, has a major effect, and is often inappropriately rationalized after the fact with the benefit of hindsight. The term is based on an ancient saying which presumed black swans did not exist, but the saying was rewritten after black swans were discovered in the wild.Any time an artist can blend genres together in a way that doesn't seem forced or stolen, it definitely makes for an eye-opening listen.
+    	</div>
+    	<div class= "quote2">
+
+    	Pink Caddy, Pepto Bismol-bile<br><br>
+
+		Ting named Kali, that ass on Sunset Hill<br><br>
+
+		A beautiful view<br><br>
+
+		Unusual, I'm hooked on a reel<br><br>
+    	</div>
+
+    	<div class="lyrics2">
+    		Hold on, wait, LT<br>
+See, see, usually I don't do this, but uh<br>
+I'ma go ahead and break 'em out with a little bit of the remix<br>
+I got a pizza on the way, bae, bae<br>
+I'm tryna lay, lay<br>
+Lil' lady, ay, I brought a bouquet of the treefer<br>
+And I'm feelin' like we should d-d-duck away<br>
+Netflix and Dusse<br>
+If I do say so myself, that ass a creature<br>
+Pizza on the way, bae, bae<br>
+I'm tryna lay, lay<br>
+Lil' lady, ay, I brought a bouquet of the treefer<br>
+And I'm feelin' like we should d-d-duck away<br>
+Netflix and Dusse<br>
+And if I do say so myself, that ass a creature<br>
+Pink Caddy, Pepto Bismol-bile<br>
+Ting named Kali, that ass on Sunset Hill<br>
+A beautiful view<br>
+Unusual, I'm hooked on a reel<br>
+And you-a be too<br>
+I'm Pookie 'bout that coochie forreal<br>
+Okay, cool<br>
+Yes, I love the way you nourish the soul<br>
+You know that ass look like a fuckin' grapefruit<br>
+Hittin' them push ups<br>
+So when I'm up in that wassup, wassup<br>
+You get whooped up, uh<br>
+Arch that thang like where I'm from<br>
+Been on my brain, Miss Serotonin<br>
+Livin' la vida with my lavita, feel like Ceddy<br>
+Liberate your limbs, eliminate your limits, let me<br>
+You feel just like lemonade on ice when I'm all sweaty<br>
+She like, "Smino, boy, I get it already"<br>
+I got a pizza on the way, bae, bae<br>
+I'm tryna lay, lay<br>
+Lil' lady, ay, I brought a bouquet of the treefer<br>
+And I'm feelin' like we should d-d-duck away<br>
+Netflix and Dusse<br>
+And if I do say so myself, that ass a creature<br>
+Pizza on the way, bae, bae<br>
+I'm tryna lay, lay<br>
+Lil' lady, ay, I brought a bouquet of the treefer<br>
+And I'm feelin' like we should d-d-duck away<br>
+Netflix and Dusse<br>
+And if I do say so myself, that ass a creature<br>
+She make me feel like, "Oh"<br>
+Early in the morning goin' crazy<br>
+It don't even matter with lil baby<br>
+She make me feel like, "Oh"<br>
+Even in the evening, turn into a heathen on me<br>
+She make me feel like, "Oh"<br>
+Yeah, ooh, ahh<br>
+She make me-e-e-e-e-e-e-e-e-e-e<br>
+Shawty text that, "Come swoop<br>
+Better yet, nigga, come soon<br>
+If you want this mouth soon, better zoom-a-zoom-zoom<br>
+Baby, drop what you're doing"<br>
+Shawty text that, "Come swoop<br>
+Better yet, nigga, come soon<br>
+If you want this mouth soon, better zoom-a-zoom-zoom<br>
+Baby, drop what you're doing"<br>
+Shawty text that, "Come swoop"<br>
+Pull up<br>
+"Better yet, nigga, come soon"<br>
+What's up?<br>
+"If you want this mouth soon, better zoom-a-zoom-zoom<br>
+Baby, drop what you're doing"<br>
+Hurr' up<br>
+Yah-ga-da-be-da-mm-dye (dye, dye-dye)<br>
+Yah-ga-da-be-da-mm-dye (dye, dye-dye)<br>
+Yah-ga-da-be-da-mm-dye (dye, dye-dye)<br>
+Yah-ga-da-be-da-mm-dye (dye)<br>
+Yah-ga-da-be-da-mm-dye (dye, dye-dye)<br>
+Yah-ga-da-be-da-mm-dye (dye, dye-dye)<br>
+Yah-ga-da-be-da-mm
+    	</div>
+    </div>
+    <div class="song3">
+
+    	<div class="label">
+    		<div class="labeltext3">
+                 <audio controls id = "saba">
+                 <source src="Love Me Right.mp3" type="audio/mp3">
+                </audio>
+
+    			Love Me Right - Amber Mark  >> 
+    		</div>
+
+    	</div>
+
+    <div class="title3">
+
+    	Love Me Right
+
+    	</div>
+
+    	<div class="information">
+    		Conexão is American singer-songwriter Amber Mark’s second EP. It follows her acclaimed debut EP 3:33am, which was released almost an exact year prior.
+Set to a minimalist bed of downtempo keys and machine-engineered beats, the overlaying of Mark’s purple-velvety voice carries not only the emotional weight of the lyrics, but the majority of the song’s musicality as well. For anyone who’s shared this experience, prepare to get hit right in the feelings.The track gives a wistful nod to classic R&B slow jams of the 1980s and ’90s—there’s the subtle lounge quality of Sade in the song’s mood, topped by her powerhouse vocals that suggest Anita Baker. 
+    	</div>
+    	<div class= "quote3">
+
+    	      Or is it just me?<br><br>
+          Am I not what you want?<br><br>
+          'Cause if that's the case baby<br><br>
+          Why lead me on?
+    	</div>
+
+    	<div class="lyrics3">
+    		Tell me because I've said it all<br>
+I've got a feeling we must've hit a wall here<br>
+And baby boy please, tell me like it is<br>
+'Cause you talk 'nuff but you never act on it<br>
+Because the drive it is alive and honey, it is calling you<br>
+And I'm numb, you're tryna hide it, I need more from you<br>
+So could you please respond to me because I'll never understand<br>
+I give you the keys and while you gladly take 'em you, don't use 'em<br>
+You tell me all the time baby<br>
+I'm the light in your life<br>
+And you love me more each day<br>
+You are starting to drive me crazy<br>
+Why won't you realise you gotta love me right baby<br>
+Help me, I feel I've lost myself<br>
+It's just this one thing, we're great everywhere else<br>
+Or is it just me?<br>
+Am I not what you want?<br>
+'Cause if that's the case baby<br>
+Why lead me on?<br>
+Because the drive it is alive and honey, it is calling you<br>
+And I'm numb, you're tryna hide it baby, I need more from you<br>
+So could you please respond to me because I'll never understand<br>
+I give you the keys and while you gladly take 'em, you don't use 'em<br>
+You tell me all the time baby<br>
+I'm the light in your life<br>
+And you love me more each day<br>
+You are starting to drive me crazy<br>
+Why won't you realize you gotta love me right baby<br>
+You tell me all the time baby (I need you here right next to me)<br>
+I'm the light in your life<br>
+And you love me more each day<br>
+You are starting to drive me crazy (come on get off your phone)<br>
+Why won't you realize you gotta love me right baby <br>
+You tell me all the time baby<br>
+I'm the light in your life<br>
+And you love me more each day<br>
+You are starting to drive me crazy<br>
+Why won't you realize you gotta love me<br>
+Oh oh and I'm light in your life (come on now)<br>
+And you love me babe<br>
+Why won't you realize you gotta love me right baby<br>
+you tell me all the time baby<br>
+I'm the light in your life<br>
+And you love me more each day<br>
+You are starting to drive me crazy<br>
+Why won't you realize you gotta love me right baby<br>
+You tell me all the time baby<br>
+I'm the light in your life<br>
+And you love me more each day<br>
+Starting to drive me crazy<br>
+Why won't you realize?<br>
+Love, love me, love me right
+    	</div>
+    </div>
+    <div class="song4">
+
+    	<div class="label">
+    		<div class="labeltext4">
+                <audio controls id = "saba">
+                 <source src="JEWELZ.mp3" type="audio/mp3">
+                </audio>
+
+    			Jewelz - Anderson .Pak  >> 
+    		</div>
+
+    	</div>
+
+    	 <div class="title4">
+
+    	Jewelz
+
+    	</div>
+
+    	<div class="information">
+    		The upbeat, pitched-up “JEWELZ” is Anderson .Paak’s first collaboration with acclaimed producer Timbaland, first teased in a brief video featuring the duo working on the track. The track finally released on October 6, 2020.During the COVID-19 quarantine in April, Anderson danced to the song with his son on Instagram Live, which has now been reuploaded to YouTube on his son’s channel. The track is a no-nonsense blast of funk-pop that’s centered around a crisp guitar lick, peppered with delicate synths and anchored, of course, by an irresistible rhythm section.The 33-year-old singer, rapper and drummer has the work rate of someone who is making up for lost time. The eminence grise of west coast rap was so wowed that he featured the previously unknown scene-stealer on six tracks and has been his musical mentor ever since. 
+    	</div>
+    	<div class= "quote4">
+
+    	          I ain't even put my jewels on<br><br>
+          I ain't even played my latest, greatest song<br><br>
+          I ain't even put my jewels on, mmm<br><br>
+          Had to make a point 'cause the whole joint way too dull
+    	</div>
+
+    	<div class="lyrics4">
+    		Alright calm down, calm down<br>
+And with over forty-two of the majority votes<br>
+It goes to Cheeky Andy<br>
+
+You know you kinda cute with the bald head (Ooh)<br>
+Got a lil' booty in the Balmains (Ooh)<br>
+You know how to move with them long legs (Dance)<br>
+Bring your lil' crew, we can all rage, oh (Come on)<br>
+The Tesla ride smoother than the PCH (Skrr)<br>
+I think that I like it with the makeup on<br>
+I know that she used to all the cheapskates<br>
+But I just wanna ball, show off and show off<br>
+
+I ain't even put my jewels on<br>
+I ain't even play my latest greatest song<br>
+I ain't even put my jewels on<br>
+Mm, had to make or break 'cause that 'lectric made to go<br>
+(Cleaner, cleaner)<br>
+
+Oh yeah, yeah<br>
+How's it workin' with Timbaland and what's he like?<br>
+
+You know you kinda cute with them long braids<br>
+Got a lil' cool when you send the shades on<br>
+I know that you ready if he don't go<br>
+You know I'ma wait if you don't take long<br>
+The Tesla ride smoother than the PCH<br>
+Wait, I don't wanna say it but I have to say it<br>
+We ain't have to too much to show off<br>
+But a nigga had to prove a point, hold up<br>
+
+I ain't even put my jewels on (Goddamn it)<br>
+I ain't even play my latest greatest song<br>
+I ain't even put my jewels on<br>
+Mm, had to make or break 'cause that 'lectric made to go<br>
+(Cleaner, cleaner)<br>
+
+Now don't it look so beauti-ful? (Yeah)<br>
+Beauti-ful<br>
+Don't it look so beauti-ful? (Uh)<br>
+Had to clean up<br>
+Don't it look so beauti... oh yeah, 'ful, yeah<br>
+Beauti... oh yeah, 'ful, yeah (Beautiful)<br>
+Beauti... oh yeah, 'ful, yeah<br>
+Clean up, I had to clean up (Beautiful)<br>
+Ooh-ooh, oh, oh-oh<br>
+I ain't even get to play my latest greatest song<br>
+I ain't even get to put my jewels on, put my jewels on<br>
+
+Woi, mate<br>
+Alright, alright, put 'em up<br>
+(What are you talking about?)<br>
+Oh piss off mate, put 'em up, buy one hand<br>
+(Oh yeah, who cares?)<br>
+Yes, I gotta sale, buy one get one free<br>
+
+I ain't even put my jewels on (Beautiful)<br>
+I ain't even play my latest greatest song<br>
+I ain't even put my jewels on<br>
+Mm, had to make or break 'cause that 'lectric made to go<br>
+(Cleaner, cleaner)<br>
+
+Now don't it look so beauti-ful? (Beautiful)<br>
+Beauti-ful<br>
+Don't it look so beauti-ful? (Beautiful)<br>
+Had to clean up<br>
+Don't it look so beauti... oh yeah, 'ful, yeah (Beautiful)<br>
+Beauti... oh yeah, 'ful, yeah (Beautiful)<br>
+Beauti... oh yeah, 'ful, yeah<br>
+Clean up, I had to clean up<br>
+
+You can see the chap comin' down<br>
+Still in impeccable shape as he makes his way off the jet<br>
+Jump<br>
+Alright, if we cou... alright<br>
+(If we could just have one word)<br>
+Back up, my nigga, ayy, ayy<br>
+Back off, give us some space, come on get in the car buddy, come on
+
+    	</div>
+    </div>
+
+     <div class="song5">
+
+    	<div class="label">
+    		<div class="labeltext5">
+                <audio controls id = "saba">
+                 <source src="The Recipe.mp3" type="audio/mp3">
+                </audio>
+
+    			The Recipe - SiR  >> 
+    		</div>
+
+    	</div>
+
+    	 <div class="title5">
+
+    	The Recipe
+
+    	</div>
+
+    	<div class="information">
+    		Upon listening, California native Sir’s third studio album gave a sentiment of reminiscing on what could be. It is as if SiR had his head in the clouds when it came to certain situations instead of facing the reality of what was actually taking place. However, although Chasing Summer carried different energy than his past catalog, sonically, it still holds true to what SiR is known for.
+ In “The Recipe” SiR talks about a woman and her infatuation with him, and how he doesn’t believe in what she wants because its not in “the recipe”. In other terms, he chooses to stick by the book. Sir Comes through on this track with some very buttery smooth vocals over a light but gloomy beat. An effortless hit, described by many. 
+    	</div>
+    	<div class= "quote5">
+
+    	          I better fall back, I don't mean to mislead her <br><br>
+But if she believe every word that I said <br><br>
+I take it all back, she playin' follow the leader <br><br>
+    	</div>
+
+    	<div class="lyrics5">
+    		I better fall back, I don't mean to mislead her<br>
+But if she believe every word that I said<br>
+I take it all back, she playin' follow the leader<br>
+But that doesn't mean that I ain't gotta leave her, oh no<br>
+She say she could give me what I need<br>
+I should make her more than company<br>
+I swear she got that fire (fire)<br>
+But does it compare to Cali? No<br>
+She's so happy when she's next to me<br>
+Thought she had me, baby really thought she had me<br>
+Now she's fiendin' for the rest of me (rest of me)<br>
+But that isn't in the recipe<br>
+Let it go, let it go, girl<br>
+This ain't what you want and you know<br>
+We could never be<br>
+I don't care how it feels<br>
+This could never be real and you know<br>
+That isn't in the recipe<br>
+Let it go, let it go, girl<br>
+This ain't what you want and you know<br>
+We could never be<br>
+I don't care how it feels<br>
+This could never be real and you know (yeah)<br>
+We hit a rhythm, no control of emotion<br>
+The more time we spend playin' house with no rhythm<br>
+More you hate it, you're a real one, speak of devotion<br>
+Told 'em to leave and came lookin' for me<br>
+I wonder, di-did I stutter when I told her ass<br>
+None of this was ever meant to last?<br>
+When I'm in it, it's that fire<br>
+But does it compare to Cali? No<br>
+She's so happy when she's next to me<br>
+Thought she had me, baby really thought she had me<br>
+Now she's fiendin' for the rest of me<br>
+But that isn't in the recipe<br>
+Let it go, let it go, girl<br>
+This ain't what you want and you know<br>
+We could never be<br>
+I don't care how it feels<br>
+This could never be real and you know<br>
+That ain't the recipe, oh<br>
+Let it go, let it go, girl<br>
+This ain't what you want and you know<br>
+We could never be<br>
+I don't care how it feels<br>
+This could never be real and you know<br>
+Oh, let it go, let it go<br>
+Let it go, let it go<br>
+Let it go, let it go<br>
+Let it go, let it go, let it
+
+    	</div>
+    </div>
+    <div class="song6">
+
+    	<div class="label">
+    		<div class="labeltext6">
+                 <audio controls id = "saba">
+                 <source src="Decided.mp3" type="audio/mp3">
+                </audio>
+
+    			Decided - Odunsi  >> 
+    		</div>
+
+    	</div>
+
+    	<div class="title6">
+
+    	Decided
+
+    	</div>
+
+    	<div class="information">
+    		The mood of the world right now is particularly slow. People are settling into a new normal, and regular routines have been taken away from us, the world is healing whilst we avoid the pandemic, which has created some time for self-reflection. Cue in Odunsi The Engine & Tems’ latest release, “Decided”, which will force listeners into this space, whether they would like to or not.Over a heavily syncopated beat which suits the pace of each artist’s delivery, the short and sweet track will definitely resonate with anyone who is listening.Artists like Odunsi The Engine and Tems through their music, make it easier for us to access our emotions, with a proximity to theirs that validates ours with honest songs like this.
+
+    	</div>
+    	<div class= "quote6">
+
+    	         Blessedly peace in the deep of sleep<br><br>
+          Time is in sync for the company<br><br>
+          Lights will go out if you come for me<br><br>
+          Fire and ice on the streets
+    	</div>
+
+    	<div class="lyrics6">
+    		Blessed and in peace in the deep of sleep<br>
+Told me to sing for the company<br>
+Lights will go out there if you'd come for me<br>
+Fire me nice on the street<br>
+
+I dived in the deep end<br>
+I've been sinking<br>
+To begin with<br>
+In the absence of your conscience<br>
+They've been silent<br>
+I have decided<br>
+
+I need to go deeper<br>
+Need to go deeper<br>
+Need to go deeper<br>
+Need to go deeper<br>
+
+Need to go deeper<br>
+Need to go deeper<br>
+Need to go deeper<br>
+Need to go deeper<br>
+
+Never know my dad<br>
+Never understood<br>
+He's been there in my life<br>
+Never in the loop<br>
+
+Kept me it my heart<br>
+Since I was a youth<br>
+If I lost him now<br>
+Don't know what I'd do<br>
+
+But I need to go deeper<br>
+Fighting for freedom<br>
+My mind is a leader<br>
+Remember days when I said I wouldn't leave her<br>
+
+Many told I didn't see truth<br>
+Many times I didn't see love<br>
+Now there is a fire in my eyes<br>
+And they wonder why<br>
+Everything look so long, yeah<br>
+
+I dived in the deep end<br>
+I've been sinking<br>
+To begin with<br>
+In the absence of your conscience<br>
+They've been silent<br>
+I decided<br>
+
+I need to go deeper<br>
+Need to go deeper<br>
+Need to go deeper<br>
+Need to go deeper<br>
+
+Need to go deeper<br>
+Need to go deeper<br>
+Need to go deeper<br>
+Need to go deeper
+    	</div>
+    </div>
+</div>
+    </body>
+
+
+   
+  <script>
+
+         $('#playbutton').click(function(){
+          //multiple actions can be here
+          $('.musicpanel').toggleClass('musicpanel-slide');
+        });
+
+          $('#playbutton').click(function(){
+          //multiple actions can be here
+          $('.backhome').toggleClass('backhomeappear');
+        });
+
+          $('.backhome').click(function(){
+          //multiple actions can be here
+          $('.musicpanel').toggleClass('musicpanel-slide-down');
+        });
+
+          $('.backhome').click(function(){
+          //multiple actions can be here
+          $('.backhome').toggleClass('backhomehide');
+        });
+
+          $('.backhome').click(function(){
+          	setTimeout(function(){
+          	$('.backhome').toggleClass('backhomehide');
+          location.reload(true);}, 2000);
+         
+        });
+
+
+
+         $('.song1').hover(function(){
+
+            $('.song2').toggleClass('song2moves');
+
+
+
+         });
+
+         $('.song1').hover(function(){
+
+            $('.song3').toggleClass('song3moves');
+
+
+
+         });
+         $('.song1').hover(function(){
+
+            $('.song4').toggleClass('song4moves');
+
+
+
+         });
+
+         $('.song1').hover(function(){
+
+            $('.song5').toggleClass('song5moves');
+
+
+
+         });
+
+          $('.song1').hover(function(){
+
+            $('.song6').toggleClass('song6moves');
+
+
+
+         });
+
+        $('.song2').hover(function(){
+
+            $('.song3').toggleClass('song3moves');
+
+
+
+         });
+
+        $('.song2').hover(function(){
+
+            $('.song4').toggleClass('song4moves');
+
+
+
+         });
+
+        $('.song2').hover(function(){
+
+            $('.song5').toggleClass('song5moves');
+
+
+
+         });
+
+        $('.song2').hover(function(){
+
+            $('.song6').toggleClass('song6moves');
+
+
+
+         });
+        $('.song2').hover(function(){
+
+            $('.song2').toggleClass('song2movesup');
+
+
+
+         });
+
+          $('.song3').hover(function(){
+
+            $('.song3').toggleClass('song3movesup');
+
+
+
+         });
+
+            $('.song3').hover(function(){
+
+            $('.song2').toggleClass('song2movesup');
+
+
+
+         });
+
+            $('.song3').hover(function(){
+
+            $('.song4').toggleClass('song4moves');
+
+
+
+         });
+
+            $('.song3').hover(function(){
+
+            $('.song5').toggleClass('song5moves');
+
+
+
+         });
+
+            $('.song3').hover(function(){
+
+            $('.song6').toggleClass('song6moves');
+
+
+
+         });
+
+            $('.song4').hover(function(){
+
+            $('.song4').toggleClass('song4movesup');
+
+
+
+         });
+
+             $('.song4').hover(function(){
+
+            $('.song3').toggleClass('song3movesup');
+
+
+
+         });
+
+            $('.song4').hover(function(){
+
+            $('.song2').toggleClass('song2movesup');
+
+
+
+         });
+
+            $('.song4').hover(function(){
+
+            $('.song5').toggleClass('song5moves');
+
+
+
+         });
+
+            $('.song4').hover(function(){
+
+            $('.song6').toggleClass('song6moves');
+
+
+
+         });
+            $('.song5').hover(function(){
+
+            $('.song5').toggleClass('song5movesup');
+
+         });
+
+            $('.song5').hover(function(){
+
+            $('.song4').toggleClass('song4movesup');
+
+         });
+
+            $('.song5').hover(function(){
+
+            $('.song3').toggleClass('song3movesup');
+
+         });
+
+            $('.song5').hover(function(){
+
+            $('.song2').toggleClass('song2movesup');
+
+         });
+
+            $('.song5').hover(function(){
+
+            $('.song6').toggleClass('song6moves');
+
+         });
+
+
+            $('.song6').hover(function(){
+
+            $('.song6').toggleClass('song6movesup');
+
+         });
+
+            $('.song6').hover(function(){
+
+            $('.song5').toggleClass('song5movesup');
+
+         });
+
+            $('.song6').hover(function(){
+
+            $('.song4').toggleClass('song4movesup');
+
+         });
+
+            $('.song6').hover(function(){
+
+            $('.song3').toggleClass('song3movesup');
+
+         });
+
+            $('.song6').hover(function(){
+
+            $('.song2').toggleClass('song2movesup');
+
+         });
+            $('.song1').hover(function(){
+
+            $('.directions').toggleClass('directionscolor1'); });
+
+            $('.song2').hover(function(){
+
+            $('.directions').toggleClass('directionscolor2'); });
+
+             $('.song3').hover(function(){
+
+            $('.directions').toggleClass('directionscolor3'); });
+
+            $('.song4').hover(function(){
+
+            $('.directions').toggleClass('directionscolor4'); });
+
+            $('.song5').hover(function(){
+
+            $('.directions').toggleClass('directionscolor5'); });
+
+            $('.song6').hover(function(){
+
+            $('.directions').toggleClass('directionscolor6'); });
+
+
+
+
+
+
+
+
+        </script>
+
+    
+</html>

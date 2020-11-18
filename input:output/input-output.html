@@ -1,0 +1,177 @@
+<!DOCTYPE html><!--document type declaration-->
+<html>
+    <head><!-- a container for metadata -->
+        <meta charset="utf-8"><!--charset: character encoding capable of encoding all characters on the web  -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
+        <title>
+        	
+        	Sketchbook
+        </title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
+        <meta name="description" content=""><!--keywords/snippet for search engines-->
+        <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+
+ <style type="text/css">
+
+ 	 @font-face{
+         font-family: DMMono-Light;
+         src: url('./font/DMMono-Light.ttf');
+      }
+
+ 	.background{
+
+ 		position:absolute;
+ 		margin-top:2vh;
+ 		margin-left:10vh;
+ 	}
+
+ 	.create{
+ 		position:absolute;
+ 		width:30vw;
+ 		font-family:'DMMono-Light';
+ 		color:black;
+ 		font-size:2vw;
+ 		text-align:left;
+ 		border:2px solid black;
+ 		margin-top:4vw;
+ 		margin-left:10.5vw;
+ 		padding:1%;
+}
+
+.create:hover{
+ 		color:blue;
+ 		border:2px solid blue;
+}
+
+.create:visited{
+ 		color:black;
+ 		border:2px solid black;
+}
+
+.archive{
+ 		position:absolute;
+ 		width:30vw;
+ 		font-family:'DMMono-Light';
+ 		color:black;
+ 		font-size:2vw;
+ 		text-align:left;
+ 		border:2px solid black;
+ 		margin-top:4vw;
+ 		margin-left:53vw;
+ 		padding:1%;
+}
+
+.archive:hover{
+ 		color:blue;
+ 		border:2px solid blue;
+}
+
+
+.homepage-image-1{
+
+	position:absolute;
+	width:20vw;
+	margin-top:60vh;
+	margin-left:12vw;
+
+}
+
+.homepage-image-2{
+
+	position:absolute;
+	width:20vw;
+	margin-top:30vh;
+	margin-left:71vw;
+	transform:rotate(180deg);
+
+}
+
+.homepage-image-3{
+
+	position:absolute;
+	width:20vw;
+	margin-top:66vh;
+	margin-left:54vw;
+	
+
+}
+
+a:link{
+
+	color:black;
+	background-color:transparent;
+	text-decoration:none;
+
+
+}
+
+a:visited{
+
+	color:black;
+	background-color:transparent;
+	text-decoration:none;
+
+}
+
+a:hover{
+
+	color:blue;
+	background-color:transparent;
+	text-decoration:underline;
+
+}
+
+
+</style>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".homepage-image-1" ).draggable();
+  } );
+
+  $( function() {
+    $( ".homepage-image-2" ).draggable();
+  } );
+
+  $( function() {
+    $( ".homepage-image-3" ).draggable();
+  } );
+  </script>
+
+    </head>
+    <body>
+    <div class= "background">
+    	<img src="homepage-01.png" style="height:96vh">
+    </div>
+    <div class="create">
+    	<a href="input-output-create.html">
+    	Create
+    </a>
+    </div>
+    <div class="archive">
+    	<a href="input-output-archive.html">
+    	Archive
+    </a>
+    </div>
+    <div class="homepage-image-1">
+    	<img src="./png/imagebank-04.png" style="height:30vh">
+    </div>
+
+    <div class="homepage-image-2">
+    	<img src="./png/imagebank-13.png" style="height:60vh">
+    </div>
+
+     <div class="homepage-image-3">
+    	<img src="./png/imagebank-12.png" style="height:26vh">
+    </div>
+
+
+    </body>
+</html>
+
+
+
+
+
+

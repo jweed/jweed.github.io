@@ -1,0 +1,391 @@
+<!DOCTYPE html><!--document type declaration-->
+<html>
+    <head>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+          $(".type").click(function(){
+            $(".type").clone().appendTo(".artboard");
+          });
+        });
+        </script>
+
+       
+
+
+        <!-- a container for metadata -->
+        <meta charset="utf-8"><!--charset: character encoding capable of encoding all characters on the web  -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
+        <title>
+        	Sketchbook Create
+        </title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
+        <meta name="description" content=""><!--keywords/snippet for search engines-->
+        <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+
+         <style type="text/css">
+
+         	@font-face{
+         font-family: DMMono-Light;
+         src: url('./font/DMMono-Light.ttf');
+    }
+
+    @media screen{
+
+    .home{
+    	position:absolute;
+    	background-color:black;
+    	width:3vw;
+    	height:5vh;
+    	margin-top:2vh;
+    	padding:.2vw;
+    	text-align: center;
+    	font-family:'DMMono-Light';
+    	color:white;
+    	font-size:1vw;
+    }
+    a:link{
+
+	color:white;
+	background-color:transparent;
+	text-decoration:none;
+
+
+}
+
+a:visited{
+
+	color:white;
+	background-color:transparent;
+	text-decoration:none;
+
+}
+
+a:hover{
+
+	color:blue;
+	background-color:transparent;
+	text-decoration:underline;
+
+}
+
+    .background{
+
+ 		position:absolute;
+ 		margin-top:2vh;
+ 		margin-left:10vh;
+ 	}
+
+ 	 #type{
+
+ 	 	position:absolute;
+ 	 	display:inline-block;
+ 		width:10vw;
+ 		font-family:'DMMono-Light';
+ 		color:black;
+ 		font-size:2vw;
+ 		text-align:left;
+ 		
+ 		margin-top:3vw;
+ 		margin-left:15vw;
+ 	
+
+
+    }
+    #image{
+    	position:absolute;
+ 	 	display:inline-block;
+ 		width:10vw;
+ 		font-family:'DMMono-Light';
+ 		color:black;
+ 		font-size:2vw;
+ 		text-align:left;
+ 		
+ 		margin-top:3vw;
+ 		margin-left:35vw;
+ 	
+
+
+    }
+
+    #drawing{
+
+    	position:absolute;
+ 	 	display:inline-block;
+ 		width:10vw;
+ 		font-family:'DMMono-Light';
+ 		color:black;
+ 		font-size:2vw;
+ 		text-align:left;
+ 		
+ 		margin-top:29vw;
+ 		margin-left:14vw;
+
+
+    }
+
+    #graphic{
+    	position:absolute;
+ 	 	display:inline-block;
+ 		width:10vw;
+ 		font-family:'DMMono-Light';
+ 		color:black;
+ 		font-size:2vw;
+ 		text-align:left;
+ 		
+ 		margin-top:29vw;
+ 		margin-left:33vw;
+ 	
+
+
+    }
+
+
+    #randomizeb1{
+
+    	position:absolute;
+ 	 	display:inline-block;
+ 		width:10vw;
+ 		height:2vw;
+ 		background-color:black;
+ 		
+ 		margin-top:24vw;
+ 		margin-left:13vw;
+
+
+    }
+
+    #randomizeb1:hover{
+    	background-color:blue;
+
+    }
+    #randomizeb2{
+    	position:absolute;
+ 	 	display:inline-block;
+ 		width:10vw;
+ 		height:2vw;
+ 		background-color:black;
+ 		
+ 		margin-top:24vw;
+ 		margin-left:32.5vw;
+
+    	
+    }
+
+    #randomizeb2:hover{
+    	background-color:blue;
+
+    }
+    #randomizeb3{
+
+    	position:absolute;
+ 	 	display:inline-block;
+ 		width:10vw;
+ 		height:2vw;
+ 		background-color:black;
+ 		
+ 		margin-top:50.5vw;
+ 		margin-left:13vw;
+
+    	
+    }
+
+    #randomizeb3:hover{
+    	background-color:blue;
+
+    }
+    #randomizeb4{
+    	position:absolute;
+ 	 	display:inline-block;
+ 		width:10vw;
+ 		height:2vw;
+ 		background-color:black;
+ 		
+ 		margin-top:50.5vw;
+ 		margin-left:32.5vw;
+
+    	
+    }
+
+    #randomizeb4:hover{
+    	background-color:blue;
+
+    }
+
+    #icon1{
+    	position:absolute;
+ 	 	display:inline-block;
+ 		width:2vw;
+ 		height:2vw;
+ 		
+ 		
+ 		margin-top:24.25vw;
+ 		margin-left:16.5vw;
+
+
+
+    }
+
+    #icon2{
+    	position:absolute;
+ 	 	display:inline-block;
+ 		width:2vw;
+ 		height:2vw;
+ 		
+ 		
+ 		margin-top:24.25vw;
+ 		margin-left:36.25vw;
+
+
+
+    }
+    #icon3{
+    	position:absolute;
+ 	 	display:inline-block;
+ 		width:2vw;
+ 		height:2vw;
+ 		
+ 		
+ 		margin-top:50.65vw;
+ 		margin-left:16.5vw;
+
+
+
+    }
+
+    #icon4{
+    	position:absolute;
+ 	 	display:inline-block;
+ 		width:2vw;
+ 		height:2vw;
+ 		
+ 		
+ 		margin-top:50.65vw;
+ 		margin-left:36.25vw;
+
+
+
+    }
+
+    .artboard{
+
+        position:absolute;
+        display:inline-block;
+        margin-top:6vh;
+        margin-left:54vw;
+        height:44vw;
+        width:56vh;
+        border: 2px solid black;
+    }
+
+    #download{
+        position:absolute;
+        display:inline-block;
+        margin-top:90vh;
+        margin-left:83vw;
+        height:4vh;
+        width:4vh;
+
+
+    }
+
+
+    .type{
+
+    position:absolute;
+        display:inline-block;
+        width:10vw;
+        height:10vh;
+      
+        
+        margin-top:6vw;
+        margin-left:11vw
+
+        }
+
+    }
+@media print{
+    .noprint{ display:none;
+
+
+    }}
+
+         </style>
+
+          <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".type" ).draggable();
+  } );
+
+
+  
+  </script>
+    </head>
+    <body>
+<div class="noprint">
+    	<div class= "background">
+    		<img src="homepage-create-01.png" style="height:96vh">
+    	</div>
+
+    	<div class="home">
+    		<a href="input-output.html">
+    		home
+    	</a>
+    	</div>
+
+	    <div id="type">
+	            Type
+	     </div>
+
+	     <div id="randomizeb1">
+	     </div>
+	     <div id="icon1">
+	     	<img src="random-02.png" style="height:3vh">
+	     </div>
+
+        <div id="image">
+            Image
+        </div>
+        <div id="randomizeb2">
+	     </div>
+	     <div id="icon2">
+	     	<img src="random-02.png" style="height:3vh">
+	     </div>
+        <div id="drawing">
+            Drawing
+        </div>
+        <div id="randomizeb3">
+	     </div>
+	     <div id="icon3">
+	     	<img src="random-02.png" style="height:3vh">
+	     </div>
+        <div id="graphic">
+            Graphic
+        </div>
+        <div id="randomizeb4">
+	     </div>
+	     <div id="icon4">
+	     	<img src="random-02.png" style="height:3vh">
+	     </div>
+     </div>
+
+         <div class="artboard">
+         </div>
+
+         <!--place content here-->
+
+         <div class="type">
+
+            <img src="./png/imagebank-07.png" style="height:30vh">
+        </div>
+     
+        <div class="noprint">
+         <div id="download">
+            <a href="javascript:window.print()">
+            <img src="download-01.png" style="height:4vh"></a>
+
+         </div></div>
+    </body>
+</html>
