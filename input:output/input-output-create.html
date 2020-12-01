@@ -60,6 +60,11 @@ $( function() {
 
     @media screen{
 
+      body{
+
+        overflow:hidden;
+      }
+
 
 
     .home{
@@ -125,6 +130,117 @@ a:hover{
  		margin-top:-1vh;
  		margin-left:(100vw/2);
  	}
+
+  .download-message{
+    display:none;
+
+    position:absolute;
+    width:36.5%;
+    height:10.6%;
+    margin-top:49%;
+    margin-left:60%;
+    background-color:white;
+    border:2px solid black;
+    font-family:'DMMono-Light';
+    color:black;
+    font-size:80%;
+    text-align:left;
+    padding:.5%;
+    box-sizing:border-box;
+  }
+
+  .download-message-active{
+    display:inline-block;
+
+    position:absolute;
+    width:36.5%;
+    height:10.6%;
+    margin-top:49%;
+    margin-left:60%;
+    background-color:white;
+    border:2px solid black;
+    font-family:'DMMono-Light';
+    color:black;
+    font-size:80%;
+    text-align:left;
+    padding:.5%;
+    box-sizing:border-box;
+  }
+
+  .paper-texture-button-active{
+
+    position:absolute;
+    display:inline-block;
+    width:10vw;
+    border: 2px solid black;
+    font-family:'DMMono-Light';
+    color:black;
+    font-size:100%;
+    text-align:left;
+    
+    margin-top:51%;
+    margin-left:60%;
+    padding:.5%;
+    cursor:pointer;
+
+  
+
+
+    }
+   
+
+    .paper-texture-button-active:hover{
+
+      color:white;
+
+      background-color:black;
+    }
+
+    .paper-texture-toggle-on{
+
+    position:absolute;
+    display:inline-block;
+    width:16vw;
+    
+    font-family:'DMMono-Light';
+    color:black;
+    font-size:100%;
+    text-align:left;
+    
+    margin-top:50%;
+    margin-left:63%;
+    padding:.5%;
+    cursor:pointer;
+
+  
+
+
+    }
+
+    .paper-texture-toggle-off{
+
+    position:absolute;
+    display:inline-block;
+    width:16vw;
+    
+    font-family:'DMMono-Light';
+    color:black;
+    font-size:100%;
+    text-align:left;
+    
+    margin-top:50%;
+    margin-left:63%;
+    padding:.5%;
+    cursor:pointer;
+
+  
+
+
+    }
+   
+
+
+
 
  	 #type{
 
@@ -329,13 +445,94 @@ a:hover{
         
     }
 
+    .artboard-texture{
+      display:none;
+      position:absolute;
+        
+        margin-top:3%;
+        margin-left:60%;
+        height:80%;
+        width:36%;
+        
+
+
+    }
+
+    .colorChoice{
+      display:none;
+      position:absolute;
+        
+        margin-top:3%;
+        margin-left:60%;
+        height:40%;
+        width:36%;
+        
+
+
+    }
+
+    .colorChoice-active{
+      display:inline-block ;
+      position:absolute;
+        
+        margin-top:3%;
+        margin-left:60%;
+        height:40%;
+        width:36%;
+        
+
+
+    }
+
+
+
+    .color-button{
+
+    position:absolute;
+    display:inline-block;
+    width:10vw;
+    border: 2px solid black;
+    font-family:'DMMono-Light';
+    color:black;
+    font-size:100%;
+    text-align:left;
+    
+    margin-top:51%;
+    margin-left:72%;
+    padding:.5%;
+    cursor:pointer;
+
+
+    }
+
+    .color-button:hover{
+
+      color:white;
+
+      background-color:black;
+    }
+
+    .artboard-texture-active{
+      display:inline-block;
+      position:absolute;
+        
+        margin-top:3%;
+        margin-left:60%;
+        height:80%;
+        width:36%;
+        
+
+
+
+    }
+
     
 
     #download{
         position:absolute;
         display:inline-block;
         margin-top:90vh;
-        margin-left:83vw;
+        margin-left:93.75vw;
         height:4vh;
         width:4vh;
 
@@ -426,6 +623,20 @@ a:hover{
     	</a>
     	</div>
 
+       
+
+      <div class="paper-texture-button-active">
+         Paper Texture 
+      </div>
+
+      <div class="color-button">
+        Paper Color
+      </div>
+      
+
+      
+
+
 	    <div id="type">
 	            Type
 	     </div>
@@ -462,9 +673,27 @@ a:hover{
 	     	<!-- <img src="random-02.png" style="height:3vh"> -->
 	     </div>
      </div>
+       <div class="artboard-texture">
+        <img src="paper-texture-01.png" style="width:100%">
+       </div>
+       <div class="colorChoice">
+        <img src="paper-color-03.png">
        
+       </div>
          <div id="artboard">
          
+        </div>
+
+         <div id="download">
+          <!-- <a href= "javascript:window.print()">-->
+                       <img src="download-01.png" style="height:4vh" > <!--</a>-->
+
+         </div>
+
+        <div class="download-message">
+          To download your sketch take a screenshot of the artboard.<br>
+          Use: Shift + Command + 4 on a Mac <br>
+          Use: Windows Key + Shift + S on a Windows PC
         </div>
          <!--type content-->
 
@@ -572,11 +801,7 @@ a:hover{
     
     
         <div class="noprint">
-         <div id="download" onclick="screenshot(); positionedPopup(this.canvas,'myWindow','500','500','0','0','yes');return false" >
-          <!-- <a href= "javascript:window.print()">-->
-                       <img src="download-01.png" style="height:4vh" > <!--</a>-->
-
-         </div></div>
+        </div>
 
      <canvas style="width:120%"> </canvas>
 
@@ -858,6 +1083,73 @@ a:hover{
         });
 
 
+        // function printPaperColor(){
+
+        //     var papercolorArray = new Array();
+
+        
+
+        //  papercolorArray[0] = new Image();
+
+        //  papercolorArray[0].src = 'paper-color-02.png';
+
+        //  papercolorArray[1] = new Image();
+
+        //  papercolorArray[1].src = 'paper-color-03.png';
+
+        //  papercolorArray[2] = new Image();
+
+        // papercolorArray[2].src = 'paper-color-04.png';
+
+        // papercolorArray[3] = new Image();
+
+        //  papercolorArray[3].src = 'paper-color-02.png';
+
+        //  papercolorArray[4] = new Image();
+
+        //  papercolorArray[4].src = 'paper-color-03.png';
+
+        //  papercolorArray[5] = new Image();
+
+        // papercolorArray[5].src = 'paper-color-04.png';
+
+        //  papercolorArray[6] = new Image();
+
+        //  papercolorArray[6].src = 'paper-color-04.png';
+
+        //  papercolorArray[7] = new Image();
+
+        //  papercolorArray[7].src = 'paper-color-04.png';
+
+        //  papercolorArray[8] = new Image();
+
+        // papercolorArray[8].src = 'paper-color-04.png';
+
+
+         
+         
+
+
+        // var choice = papercolorArray[Math.floor(Math.random()*papercolorArray.length)];
+
+        // console.log(choice);
+
+        // $('.colorChoice').html(choice);
+
+
+        // };
+
+        //  // printPaperColor();
+
+        // $('.color-button').click(function(){
+
+        // printPaperColor();
+
+
+        // });
+
+
+
 
 
 
@@ -883,6 +1175,61 @@ a:hover{
       $( function() {
     $( ".graphic" ).draggable();
   } );
+
+
+                  $('.paper-texture-button-active').click(function(){
+
+                  $('.artboard-texture').toggleClass('artboard-texture-active');
+
+
+                  });
+
+                  $('.color-button').click(function(){
+
+                  $('.colorChoice').toggleClass('colorChoice-active');
+
+
+                  });
+
+                  $('#download').hover(function(){
+
+                  $('.download-message').toggleClass('download-message-active');
+
+
+                  });
+
+                  // $('.paper-texture-button-active').click(function(){
+
+                  // $('.paper-texture-button-active').toggleClass('paper-texture-button');
+
+
+                  // });
+
+
+                  // $('.paper-texture-button-active').click(function(){
+
+                  // $('.paper-texture-button-off').toggleClass('paper-texture-button-off-active');
+
+
+                  // });
+
+                  //  $('.paper-texture-button-off').click(function(){
+
+                  // $('.paper-texture-button-off-active').toggleClass('paper-texture-button-off');
+
+
+                  // });
+
+                  // $('.paper-texture-button-off').click(function(){
+
+                  // $('.paper-texture-button').toggleClass('paper-texture-button-active');
+
+
+                  // });
+
+
+
+                 
 
   </script>
 
@@ -935,9 +1282,7 @@ a:hover{
 
          
 
-        
-
-       
+                  
 
 
         
