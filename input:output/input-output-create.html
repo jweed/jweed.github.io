@@ -2,14 +2,15 @@
 <html>
     <head>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-        $(document).ready(function(){
-          $(".type").click(function(){
-            $(".type").clone().appendTo(".artboard");
-          });
+       <script type="text/javascript" src="jquery-1.3.2.js"></script>
+    <script type="text/javascript" src="jquery.print.js"></script>
+    <script type="text/javascript">
+
+        $('#download').click(function(){
+
+            $('#artboard').print();
         });
-        </script>
+    </script>
 
        
 
@@ -23,6 +24,33 @@
         <meta name="description" content=""><!--keywords/snippet for search engines-->
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
 
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ 
+  <script>
+
+  $( function() {
+    $( ".type" ).draggable();
+  } );
+
+  $( function() {
+    $( ".image" ).draggable();
+  } );
+
+$( function() {
+    $( ".drawing" ).draggable();
+  } );
+
+$( function() {
+    $( ".graphic" ).draggable();
+  } );
+
+  </script> -->
+
+
+        
+
+
          <style type="text/css">
 
          	@font-face{
@@ -32,17 +60,39 @@
 
     @media screen{
 
+
+
     .home{
     	position:absolute;
-    	background-color:black;
-    	width:3vw;
-    	height:5vh;
-    	margin-top:2vh;
-    	padding:.2vw;
+    	
+    	width:3%;
+    	height:2%;
+    	margin-top:1.2%;
+      margin-left:2.2%;
+    	
     	text-align: center;
     	font-family:'DMMono-Light';
     	color:white;
-    	font-size:1vw;
+    	font-size:1.5vw;
+    }
+
+    .home-paper{
+      position:absolute;
+      
+      width:3%;
+      height:2%;
+      margin-top:1.5vh;
+        margin-left:1vw;
+      
+      text-align: center;
+      font-family:'DMMono-Light';
+      color:black;
+      font-size:1vw;
+    }
+
+    .home-paper:hover{
+
+      transform:rotate(10deg);
     }
     a:link{
 
@@ -63,17 +113,17 @@ a:visited{
 
 a:hover{
 
-	color:blue;
+	color:white;
 	background-color:transparent;
-	text-decoration:underline;
+	text-decoration:none;
 
 }
 
     .background{
 
  		position:absolute;
- 		margin-top:2vh;
- 		margin-left:10vh;
+ 		margin-top:-1vh;
+ 		margin-left:(100vw/2);
  	}
 
  	 #type{
@@ -83,11 +133,11 @@ a:hover{
  		width:10vw;
  		font-family:'DMMono-Light';
  		color:black;
- 		font-size:2vw;
+ 		font-size:100%;
  		text-align:left;
  		
- 		margin-top:3vw;
- 		margin-left:15vw;
+ 		margin-top:2%;
+ 		margin-left:11%;
  	
 
 
@@ -98,11 +148,11 @@ a:hover{
  		width:10vw;
  		font-family:'DMMono-Light';
  		color:black;
- 		font-size:2vw;
+ 		font-size:100%;
  		text-align:left;
  		
- 		margin-top:3vw;
- 		margin-left:35vw;
+ 		margin-top:2%;
+ 		margin-left:34%;
  	
 
 
@@ -115,11 +165,11 @@ a:hover{
  		width:10vw;
  		font-family:'DMMono-Light';
  		color:black;
- 		font-size:2vw;
+ 		font-size:100%;
  		text-align:left;
  		
- 		margin-top:29vw;
- 		margin-left:14vw;
+ 		margin-top:29%;
+ 		margin-left:10%;
 
 
     }
@@ -130,11 +180,11 @@ a:hover{
  		width:10vw;
  		font-family:'DMMono-Light';
  		color:black;
- 		font-size:2vw;
+ 		font-size:100%;
  		text-align:left;
  		
- 		margin-top:29vw;
- 		margin-left:33vw;
+ 		margin-top:29%;
+ 		margin-left:33%;
  	
 
 
@@ -145,73 +195,73 @@ a:hover{
 
     	position:absolute;
  	 	display:inline-block;
- 		width:10vw;
- 		height:2vw;
- 		background-color:black;
+ 		width:10%;
+ 		height:8%;
+ 		/*border:2px solid black;*/
  		
- 		margin-top:24vw;
- 		margin-left:13vw;
+ 		margin-top:24%;
+ 		margin-left:20%;
 
 
     }
 
     #randomizeb1:hover{
-    	background-color:blue;
+    	transform:rotate(-15deg);
 
     }
-    #randomizeb2{
+   /* #randomizeb2{
     	position:absolute;
  	 	display:inline-block;
- 		width:10vw;
- 		height:2vw;
- 		background-color:black;
- 		
- 		margin-top:24vw;
- 		margin-left:32.5vw;
+ 		width:3.5%;
+        height:3.2%;
+        border:2px solid black;
+        
+        margin-top:25%;
+ 		margin-left:34%;
 
     	
     }
 
     #randomizeb2:hover{
-    	background-color:blue;
+    	background-color:grey;
 
     }
     #randomizeb3{
 
     	position:absolute;
  	 	display:inline-block;
- 		width:10vw;
- 		height:2vw;
- 		background-color:black;
+ 		width:3.5%;
+        height:3.2%;
+        border:2px solid black;
  		
- 		margin-top:50.5vw;
- 		margin-left:13vw;
+ 		margin-top:52.5%;
+ 		margin-left:10.7%;
 
     	
     }
 
     #randomizeb3:hover{
-    	background-color:blue;
+    	background-color:grey;
 
     }
     #randomizeb4{
     	position:absolute;
  	 	display:inline-block;
- 		width:10vw;
- 		height:2vw;
- 		background-color:black;
+ 		width:3.5%;
+        height:3.2%;
+        border:2px solid black;
  		
- 		margin-top:50.5vw;
- 		margin-left:32.5vw;
+ 		margin-top:52.5%;
+ 		margin-left:34%;
 
     	
     }
 
     #randomizeb4:hover{
-    	background-color:blue;
+    	background-color:grey;
 
     }
-
+*/
     #icon1{
     	position:absolute;
  	 	display:inline-block;
@@ -219,8 +269,8 @@ a:hover{
  		height:2vw;
  		
  		
- 		margin-top:24.25vw;
- 		margin-left:16.5vw;
+ 		margin-top:25.8%;
+ 		margin-left:22.5%;
 
 
 
@@ -233,8 +283,8 @@ a:hover{
  		height:2vw;
  		
  		
- 		margin-top:24.25vw;
- 		margin-left:36.25vw;
+ 		margin-top:25.25%;
+ 		margin-left:34.7%;
 
 
 
@@ -246,8 +296,9 @@ a:hover{
  		height:2vw;
  		
  		
- 		margin-top:50.65vw;
- 		margin-left:16.5vw;
+ 		margin-top:52.7%;
+ 		margin-left:11.5%;
+
 
 
 
@@ -260,23 +311,25 @@ a:hover{
  		height:2vw;
  		
  		
- 		margin-top:50.65vw;
- 		margin-left:36.25vw;
-
+ 		margin-top:52.7%;
+ 		margin-left:34.7%;
 
 
     }
 
-    .artboard{
+    #artboard{
 
         position:absolute;
         display:inline-block;
-        margin-top:6vh;
-        margin-left:54vw;
-        height:44vw;
-        width:56vh;
+        margin-top:3%;
+        margin-left:60%;
+        height:80%;
+        width:36%;
         border: 2px solid black;
+        
     }
+
+    
 
     #download{
         position:absolute;
@@ -292,14 +345,56 @@ a:hover{
 
     .type{
 
-    position:absolute;
+        position:absolute;
         display:inline-block;
-        width:10vw;
-        height:10vh;
+        width:10%;
+        height:10%;
       
         
-        margin-top:6vw;
-        margin-left:11vw
+        margin-top:4%;
+        margin-left:4%;
+
+        }
+
+    .image{
+
+        position:absolute;
+        display:inline-block;
+        width:10%;
+        height:10%;
+      
+        
+        margin-top:3%;
+        margin-left:27%;
+
+
+        }
+
+        .drawing{
+
+        position:absolute;
+        display:inline-block;
+        width:10%;
+        height:10%;
+      
+
+        margin-top:30%;
+        margin-left:4%;
+        
+        }
+
+        .graphic{
+
+        position:absolute;
+        display:inline-block;
+        width:10%;
+        height:10%;
+      
+
+        margin-top:30%;
+        margin-left:27%;
+        
+
 
         }
 
@@ -310,28 +405,24 @@ a:hover{
 
     }}
 
-         </style>
-
-          <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( ".type" ).draggable();
-  } );
-
+    </style>
 
   
-  </script>
+
+
     </head>
     <body>
 <div class="noprint">
     	<div class= "background">
-    		<img src="homepage-create-01.png" style="height:96vh">
+    		<img src="homepage-create-01.png" style="height:100vh">
     	</div>
-
+      <div class="home-paper">
+          <img src="paper-scrap-05.png" style="height:5vh">
+      </div>
     	<div class="home">
+        
     		<a href="input-output.html">
-    		home
+    		Back
     	</a>
     	</div>
 
@@ -340,9 +431,10 @@ a:hover{
 	     </div>
 
 	     <div id="randomizeb1">
+        <img src="paper-scrap-01.png" style="height:13vh">
 	     </div>
 	     <div id="icon1">
-	     	<img src="random-02.png" style="height:3vh">
+	     	<img src="random-02.png" style="height:6vh">
 	     </div>
 
         <div id="image">
@@ -351,7 +443,7 @@ a:hover{
         <div id="randomizeb2">
 	     </div>
 	     <div id="icon2">
-	     	<img src="random-02.png" style="height:3vh">
+	     <!-- 	<img src="random-02.png" style="height:3vh"> -->
 	     </div>
         <div id="drawing">
             Drawing
@@ -359,7 +451,7 @@ a:hover{
         <div id="randomizeb3">
 	     </div>
 	     <div id="icon3">
-	     	<img src="random-02.png" style="height:3vh">
+	     	<!-- <img src="random-02.png" style="height:3vh"> -->
 	     </div>
         <div id="graphic">
             Graphic
@@ -367,25 +459,495 @@ a:hover{
         <div id="randomizeb4">
 	     </div>
 	     <div id="icon4">
-	     	<img src="random-02.png" style="height:3vh">
+	     	<!-- <img src="random-02.png" style="height:3vh"> -->
 	     </div>
      </div>
-
-         <div class="artboard">
-         </div>
-
-         <!--place content here-->
+       
+         <div id="artboard">
+         
+        </div>
+         <!--type content-->
 
          <div class="type">
 
-            <img src="./png/imagebank-07.png" style="height:30vh">
+           <!-- <img src="./png/imagebank-30.png" style="height:40vh">
+            
         </div>
-     
+        <div class="type">
+
+            <img src="./png/imagebank-30.png" style="height:40vh">
+            
+        </div>
+        <div class="type">
+
+            <img src="./png/imagebank-30.png" style="height:40vh">
+            
+        </div>
+        <div class="type">
+
+            <img src="./png/imagebank-30.png" style="height:40vh">
+            
+        </div>
+        <div class="type">
+
+            <img src="./png/imagebank-30.png" style="height:40vh"> -->
+            
+        </div>
+        <div class="type">
+        </div>
+        <div class="type">
+        </div>
+        <div class="type">
+        </div>
+        <div class="type">
+        </div>
+
+          <!--image content-->
+
+        <div class="image">
+          
+        </div>
+        <div class="image">
+          
+        </div>
+        <div class="image">
+          
+        </div>
+        <div class="image">
+          
+        </div>
+        <div class="image">
+          
+        </div>
+
+         <!--drawing content-->
+
+        <div class="drawing">
+       
+          
+        </div>
+         <div class="drawing">
+       
+          
+        </div>
+         <div class="drawing">
+       
+          
+        </div>
+        <div class="drawing">
+       
+          
+        </div>
+        <div class="drawing">
+       
+          
+        </div>
+
+        <div class="graphic">
+
+    
+        </div>
+        <div class="graphic">
+
+    
+        </div>
+        <div class="graphic">
+
+    
+        </div>
+        <div class="graphic">
+
+    
+        </div>
+        <div class="graphic">
+
+    
+        </div>
+
+
+
+
+
+      
+    
+    
         <div class="noprint">
-         <div id="download">
-            <a href="javascript:window.print()">
-            <img src="download-01.png" style="height:4vh"></a>
+         <div id="download" onclick="screenshot(); positionedPopup(this.canvas,'myWindow','500','500','0','0','yes');return false" >
+          <!-- <a href= "javascript:window.print()">-->
+                       <img src="download-01.png" style="height:4vh" > <!--</a>-->
 
          </div></div>
+
+     <canvas style="width:120%"> </canvas>
+
+         
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+          <script type="text/javascript">
+
+        
+
+        function printType(){
+
+            var typeArray = new Array();
+
+        
+
+         typeArray[0] = new Image();
+
+         typeArray[0].src = './png/imagebank-07.png';
+
+         typeArray[1] = new Image();
+
+          typeArray[1].src = './png/imagebank-08.png';
+
+          typeArray[2] = new Image();
+
+          typeArray[2].src = './png/imagebank-11.png';
+
+         typeArray[3] = new Image();
+
+        typeArray[3].src = './png/imagebank-15.png'
+
+          typeArray[4] = new Image();
+
+          typeArray[4].src = './png/imagebank-28.png';
+
+          typeArray[5] = new Image();
+
+          typeArray[5].src = './png/imagebank-30.png';
+
+         typeArray[6] = new Image();
+
+         typeArray[6].src = './png/imagebank-31.png';
+
+         typeArray[7] = new Image();
+
+         typeArray[7].src = './png/imagebank-34.png';
+
+        typeArray[8] = new Image();
+
+        typeArray[8].src = './png/imagebank-36.png';
+
+
+
+        var choice = typeArray[Math.floor(Math.random()*typeArray.length)];
+
+        console.log(choice);
+
+        $('.type').html(choice);
+
+
+        };
+
+        printType();
+
+        $('#randomizeb1').click(function(){
+
+        printType();
+
+
+        });
+
+        function printImage(){
+
+            var imgArray = new Array();
+
+        
+
+         imgArray[0] = new Image();
+
+         imgArray[0].src = './png/imagebank-04.png';
+
+         imgArray[1] = new Image();
+
+          imgArray[1].src = './png/imagebank-09.png';
+
+          imgArray[2] = new Image();
+
+          imgArray[2].src = './png/imagebank-13.png';
+
+         imgArray[3] = new Image();
+
+         imgArray[3].src = './png/imagebank-25.png'
+
+          imgArray[4] = new Image();
+
+          imgArray[4].src = './png/imagebank-32.png';
+
+          imgArray[5] = new Image();
+
+          imgArray[5].src = './png/imagebank-38.png';
+
+         
+
+
+        var choice = imgArray[Math.floor(Math.random()*imgArray.length)];
+
+        console.log(choice);
+
+        $('.image').html(choice);
+
+
+        };
+
+        printImage();
+
+        $('#randomizeb1').click(function(){
+
+        printImage();
+
+
+        });
+
+        function printDrawing(){
+
+            var drawArray = new Array();
+
+        
+
+         drawArray[0] = new Image();
+
+         drawArray[0].src = './png/imagebank-02.png';
+
+         drawArray[1] = new Image();
+
+          drawArray[1].src = './png/imagebank-05.png';
+
+          drawArray[2] = new Image();
+
+          drawArray[2].src = './png/imagebank-08.png';
+
+         drawArray[3] = new Image();
+
+         drawArray[3].src = './png/imagebank-10.png'
+
+          drawArray[4] = new Image();
+
+          drawArray[4].src = './png/imagebank-12.png';
+
+         drawArray[5] = new Image();
+
+          drawArray[5].src = './png/imagebank-14.png';
+
+          drawArray[6] = new Image();
+
+         drawArray[6].src = './png/imagebank-16.png';
+
+         drawArray[7] = new Image();
+
+         drawArray[7].src = './png/imagebank-19.png';
+
+         drawArray[8] = new Image();
+
+         drawArray[8].src = './png/imagebank-24.png';
+
+         drawArray[9] = new Image();
+
+        drawArray[9].src = './png/imagebank-26.png';
+
+        drawArray[10] = new Image();
+
+        drawArray[10].src = './png/imagebank-29.png';
+
+        drawArray[11] = new Image();
+
+        drawArray[11].src = './png/imagebank-35.png';
+
+
+
+         
+
+
+        var choice = drawArray[Math.floor(Math.random()*drawArray.length)];
+
+        console.log(choice);
+
+        $('.drawing').html(choice);
+
+
+        };
+
+         printDrawing();
+
+        $('#randomizeb1').click(function(){
+
+        printDrawing();
+
+
+        });
+
+
+        function printGraphic(){
+
+            var graphicArray = new Array();
+
+        
+
+         graphicArray[0] = new Image();
+
+         graphicArray[0].src = './png/imagebank-01.png';
+
+         graphicArray[1] = new Image();
+
+         graphicArray[1].src = './png/imagebank-03.png';
+
+         graphicArray[2] = new Image();
+
+        graphicArray[2].src = './png/imagebank-06.png';
+
+         graphicArray[3] = new Image();
+
+         graphicArray[3].src = './png/imagebank-17.png'
+
+         graphicArray[4] = new Image();
+
+        graphicArray[4].src = './png/imagebank-18.png';
+
+        graphicArray[5] = new Image();
+
+         graphicArray[5].src = './png/imagebank-20.png';
+
+         graphicArray[6] = new Image();
+
+        graphicArray[6].src = './png/imagebank-21.png';
+
+        graphicArray[7] = new Image();
+
+        graphicArray[7].src = './png/imagebank-22.png';
+
+        graphicArray[8] = new Image();
+
+        graphicArray[8].src = './png/imagebank-23.png';
+
+        graphicArray[9] = new Image();
+
+        graphicArray[9].src = './png/imagebank-27.png';
+
+        graphicArray[10] = new Image();
+
+        graphicArray[10].src = './png/imagebank-33.png';
+
+        graphicArray[11] = new Image();
+
+        graphicArray[11].src = './png/imagebank-39.png';
+
+
+
+         
+
+
+        var choice = graphicArray[Math.floor(Math.random()*graphicArray.length)];
+
+        console.log(choice);
+
+        $('.graphic').html(choice);
+
+
+        };
+
+         printGraphic();
+
+        $('#randomizeb1').click(function(){
+
+        printGraphic();
+
+
+        });
+
+
+
+
+
+
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+
+    $( function() {
+    $( ".type" ).draggable();
+  } );
+
+    $( function() {
+    $( ".image" ).draggable();
+  } );
+     $( function() {
+    $( ".drawing" ).draggable();
+  } );
+
+      $( function() {
+    $( ".graphic" ).draggable();
+  } );
+
+  </script>
+
+  <script type="text/javascript" src="./dist/html2canvas.js"></script>
+        <script type="text/javascript">
+
+          
+
+
+
+          
+
+      function screenshot(){
+
+           html2canvas(document.body).then(function(canvas) {
+  document.body.appendChild(canvas);
+
+ }
+
+ );
+
+
+       }
+
+
+
+      
+           
+
+            // html2canvas(document.querySelector(document.body)).then(canvas => {
+            // document.body.appendChild(canvas)
+            // });
+
+        //     html2canvas(document.body).then(function(canvas){
+
+            var popupWindow = null;
+            function positionedPopup(canvas,winName,w,h,t,l,scroll){
+            settings =
+            'height='+h+',width='+w+',top='+t+',left='+l+',scrollbars='+scroll+',resizable'
+            popupWindow = window.open(this.canvas,winName,settings)
+            }
+
+
+
+
+            
+            
+
+          
+
+         
+
+        
+
+       
+
+
+        
+
+        </script>
+
+   
     </body>
+
+
+          
+   
 </html>

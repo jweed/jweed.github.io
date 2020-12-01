@@ -9,6 +9,8 @@
         <meta name="description" content=""><!--keywords/snippet for search engines-->
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
          <style type="text/css">
 
             @font-face{
@@ -16,22 +18,247 @@
                  src: url('./font/DMMono-Light.ttf');
     }
 
+    body{
+        overflow:hidden;
+    }
+
     .background{
 
         position:absolute;
-        margin-top:2vh;
-        margin-left:10vh;
+        margin-top:-1vh;
+        margin-left:100vw/2;
     }
+
+    .home{
+        position:absolute;
+        
+        width:3%;
+        height:2%;
+        margin-top:1.2%;
+      margin-left:2.2%;
+        
+        text-align: center;
+        font-family:'DMMono-Light';
+        color:white;
+        font-size:1.5vw;
+    }
+
+    .home-paper{
+      position:absolute;
+      
+      width:3%;
+      height:2%;
+      margin-top:1.5vh;
+        margin-left:1vw;
+      
+      text-align: center;
+      font-family:'DMMono-Light';
+      color:black;
+      font-size:1vw;
+    }
+
+    .home-paper:hover{
+
+      transform:rotate(10deg);
+    }
+    a:link{
+
+    color:white;
+    background-color:transparent;
+    text-decoration:none;
+
+
+}
+
+a:visited{
+
+    color:white;
+    background-color:transparent;
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    color:white;
+    background-color:transparent;
+    text-decoration:none;
+
+}
+
+.left-page{
+  position:absolute;
+  width:46vw;
+  height:90vh;
+  margin-top:4%;
+  margin-left:0vw;
+  /*border:2px black solid;*/
+  overflow:scroll;
+    
+
+
+}
+
+.right-page{
+
+  position:absolute;
+  width:46vw;
+  height:90vh;
+  margin-top:4%;
+  margin-left:52vw;
+  /*border:2px black solid;*/
+  overflow:scroll;
+
+  
+  
+}
+
+.left-page-row1{
+
+    position:absolute;
+  width:43vw;
+  height:46%;
+  margin-top:0%;
+  margin-left:4%;
+  border:2px black solid;}
+
+  .left-page-row2{
+
+    position:absolute;
+  width:43vw;
+  height:46%;
+  margin-top:56%;
+  margin-left:4%;
+  border:2px black solid;}
+
+
+.left-page-row3{
+
+    position:absolute;
+  width:43vw;
+  height:46%;
+  margin-top:112%;
+  margin-left:4%;
+  border:2px black solid;}
+
+  .right-page-row1{
+
+    position:absolute;
+  width:43vw;
+  height:46%;
+  margin-top:0%;
+  margin-left:4%;
+  border:2px black solid;}
+
+  .right-page-row2{
+
+    position:absolute;
+  width:43vw;
+  height:46%;
+  margin-top:56%;
+  margin-left:4%;
+  border:2px black solid;}
+
+
+.right-page-row3{
+
+    position:absolute;
+  width:43vw;
+  height:46%;
+  margin-top:112%;
+  margin-left:4%;
+  border:2px black solid;}
+
+
+
+  
+
+
 
    
 
          </style>
+
     </head>
     <body>
 
         <div class= "background">
-             <img src="homepage-blank-01.png" style="height:96vh">
+            <img src="homepage-blank-01.png" style="height:100vh">
         </div>
+
+        <div class="home-paper">
+          <img src="paper-scrap-05.png" style="height:5vh">
+      </div>
+        <div class="home">
+        
+            <a href="input-output.html">
+            Back
+        </a>
+        </div>
+        <div class="left-page">
+
+            <div class="left-page-row1">
+                <a href="./png-archive/archive-01.png" title="The Communal Sketchbook" download="The_Communal_Sketchbook_.png">
+                <img src="./png-archive/archive-01.png" style="height:100%"></a>
+                <img src="./png-archive/archive-02.png" style="height:100%">
+            </div>
+            <div class="left-page-row2">
+                <img src="./png-archive/archive-03.png" style="height:100%">
+                <img src="./png-archive/archive-04.png" style="height:100%">
+            </div>
+            <div class="left-page-row3">
+                <img src="./png-archive/archive-05.png" style="height:100%">
+                <img src="./png-archive/archive-06.png" style="height:100%">
+            </div>
+
+        </div>
+        <div class="right-page">
+            <div class="right-page-row1">
+                 <img src="./png-archive/archive-07.png" style="height:100%">
+                <img src="./png-archive/archive-08.png" style="height:100%">
+            </div>
+            <div class="right-page-row2">
+                 <img src="./png-archive/archive-09.png" style="height:100%">
+                <img src="./png-archive/archive-10.png" style="height:100%">
+            </div>
+            <div class="right-page-row3">
+
+                 <img src="./png-archive/archive-11.png" style="height:100%">
+                <img src="./png-archive/archive-12.png" style="height:100%">
+            </div>
+
+
+        </div>
+
+        <script>
+
+            function downloading(){
+
+                 function onStartedDownload(id) {
+                  console.log(`Started downloading: ${id}`);
+                }
+
+                function onFailed(error) {
+                  console.log(`Download failed: ${error}`);
+                }
+
+                var downloadUrl = "./png-archive/archive-01.png";
+
+                var downloading = chrome.downloads.download({
+                  url : './png-archive/archive-01.png',
+                  filename : 'the-communal-sketchbook.png',
+                  conflictAction : 'uniquify'
+                });
+
+                downloading.then(onStartedDownload, onFailed);
+
+
+
+
+            };
+               
+
+        </script>
         
 
 

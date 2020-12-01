@@ -5,10 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
         <title>
         	
-        	Sketchbook
+        	The Communal Sketchbook
         </title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
         <meta name="description" content=""><!--keywords/snippet for search engines-->
         <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
  <style type="text/css">
 
@@ -16,12 +18,15 @@
          font-family: DMMono-Light;
          src: url('./font/DMMono-Light.ttf');
       }
+body{
 
+  overflow:hidden;
+}
  	.background{
 
  		position:absolute;
- 		margin-top:2vh;
- 		margin-left:10vh;
+ 		margin-top:-1vh;
+ 		margin-left:(100vw/2);
  	}
 
  	.create{
@@ -31,20 +36,36 @@
  		color:black;
  		font-size:2vw;
  		text-align:left;
- 		border:2px solid black;
- 		margin-top:4vw;
- 		margin-left:10.5vw;
+ 		
+ 		margin-top:4%;
+ 		margin-left:4%;
  		padding:1%;
+}
+
+.create-button{
+  position:absolute;
+  width:50vw;
+  height:100vh;
+  margin-top:0px;
+  margin-left:0vw;
+  font-family:'DMMono-Light';
+  color:black;
+  font-size:2vw;
+  text-align:left;
+  padding:4%;
+    
+
+
 }
 
 .create:hover{
  		color:blue;
- 		border:2px solid blue;
+ 		
 }
 
 .create:visited{
  		color:black;
- 		border:2px solid black;
+ 		
 }
 
 .archive{
@@ -54,45 +75,235 @@
  		color:black;
  		font-size:2vw;
  		text-align:left;
- 		border:2px solid black;
- 		margin-top:4vw;
- 		margin-left:53vw;
+ 		
+ 		margin-top:4%;
+ 		margin-left:8%;
  		padding:1%;
+}
+
+.archive-button{
+
+  position:absolute;
+  width:50vw;
+  height:100vh;
+  margin-top:0px;
+  margin-left:50vw;
+  font-family:'DMMono-Light';
+  color:black;
+  font-size:2vw;
+  text-align:left;
+  padding:4%;
+
+  
 }
 
 .archive:hover{
  		color:blue;
- 		border:2px solid blue;
+
+ 		
 }
+
+
 
 
 .homepage-image-1{
 
 	position:absolute;
 	width:20vw;
-	margin-top:60vh;
-	margin-left:12vw;
+	margin-top:-10vh;
+	margin-left:8vw;
 
+}
+
+.homepage-image-1-rotate{
+
+  transform:rotate(30deg);
 }
 
 .homepage-image-2{
 
 	position:absolute;
 	width:20vw;
-	margin-top:30vh;
-	margin-left:71vw;
+	margin-top:10vh;
+	margin-left:20vw;
 	transform:rotate(180deg);
 
+}
+
+.homepage-image-2-rotate{
+
+  transform:rotate(170deg);
 }
 
 .homepage-image-3{
 
 	position:absolute;
 	width:20vw;
-	margin-top:66vh;
-	margin-left:54vw;
+	margin-top:52vh;
+	margin-left:2vw;
 	
 
+}
+
+.homepage-image-3-rotate{
+  transform:rotate(10deg);
+}
+
+.create-image-1{
+position:absolute;
+  width:20vw;
+  margin-top:30vh;
+  margin-left:-5vw;
+
+}
+
+.create-image-1-rotate{
+  transform:rotate(10deg);
+
+  
+}
+.create-image-2{
+  position:absolute;
+  width:20vw;
+  margin-top:0vh;
+  margin-left:22vw;
+  transform:rotate(90deg);
+
+
+}
+
+.create-image-2-rotate{
+  transform:rotate(80deg);
+
+  
+}
+.create-image-3{
+  position:absolute;
+  width:20vw;
+  margin-top:42vh;
+  margin-left:18vw;
+  
+
+}
+
+.create-image-3-rotate{
+  transform:rotate(30deg);
+
+  
+}
+
+.about-button{
+
+  position:absolute;
+  width:10vw;
+  margin-top:70vh;
+  margin-left:76vw;
+  font-family:'DMMono-Light';
+  color:black;
+  font-size:2vw;
+  text-align:left;
+  padding:4%;
+  
+
+
+}
+
+.about-button:hover{
+
+  transform:rotate(10deg);
+}
+
+.about-button-text{
+
+  position:absolute;
+  width:1vw;
+  height:1vw;
+  margin-top:82vh;
+  margin-left:83vw;
+  font-family:'DMMono-Light';
+  color:white;
+  font-size:2vw;
+  text-align:left;
+  cursor:pointer;
+  
+  
+
+
+}
+
+.about{
+
+  position:absolute;
+
+  display:none;
+  width:44vw;
+  height:93vh;
+  margin-top:1vh;
+  margin-left:53vw;
+  background-color:white;
+  font-family:'DMMono-Light';
+  color:black;
+  font-size:1.2vw;
+  text-align:left;
+  padding:2%;
+  
+}
+
+.about-active{
+
+  position:absolute;
+
+  display:inline-block;
+  width:40vw;
+  height:88vh;
+  margin-top:1vh;
+  margin-left:53vw;
+  background-color:white;
+  font-family:'DMMono-Light';
+  color:black;
+  font-size:1.2vw;
+  text-align:left;
+  padding:2%;
+}
+
+.back-button{
+
+  display:none;
+  position:absolute;
+  width:10vw;
+  margin-top:86vh;
+  margin-left:30vw;
+ 
+
+}
+
+.back-button:hover{
+
+  transform:rotate(-10deg);
+}
+
+.back-button-active{
+
+  display:inline-block;
+}
+
+.back-button-text{
+  display:none;
+  position:absolute;
+  width:3;
+  margin-top:88vh;
+  margin-left:34.5vw;
+  font-family:'DMMono-Light';
+  color:white;
+  font-size:2vw;
+  text-align:left;
+  cursor:pointer;
+  
+}
+
+.back-button-text-active{
+
+  display:inline-block;
 }
 
 a:link{
@@ -114,11 +325,57 @@ a:visited{
 
 a:hover{
 
-	color:blue;
+	color:black;
 	background-color:transparent;
-	text-decoration:underline;
+	text-decoration:none;
 
 }
+
+.underline1{
+
+  display:none;
+  position:absolute;
+  width:10vw;
+  margin-top:11vh;
+  margin-left:4vw;
+
+
+
+
+}
+
+.underline1-active{
+  display:inline-block;
+  position:absolute;
+  width:10vw;
+  margin-top:11vh;
+  margin-left:4vw;
+
+
+}
+
+.underline2{
+
+  display:none;
+  position:absolute;
+  width:10vw;
+  margin-top:11vh;
+  margin-left:54vw;
+
+
+}
+
+.underline2-active{
+  display:inline-block;
+  position:absolute;
+  width:10vw;
+  margin-top:11vh;
+  margin-left:54vw;
+
+  
+}
+
+
 
 
 </style>
@@ -141,19 +398,43 @@ a:hover{
 
     </head>
     <body>
+     
     <div class= "background">
-    	<img src="homepage-01.png" style="height:96vh">
+    	<img src="homepage-01.png" style="height:100vh">
     </div>
-    <div class="create">
-    	<a href="input-output-create.html">
+
+    <div class="underline1">
+      <img src="underline-08.png" style="height:2vh">
+    </div>
+
+    <div class="underline2">
+      <img src="underline-07.png" style="height:3vh">
+    </div>
+
+
+    <a class="create-button" href="input-output-create.html">
+    
+    	
     	Create
-    </a>
+
+    <div class="create-image-1">
+      <img src="create-homepage-image-02.png" style="height:40vh">
     </div>
-    <div class="archive">
-    	<a href="input-output-archive.html">
+    <div class="create-image-2">
+      <img src="create-homepage-image-03.png" style="height:40vh">
+    </div>
+    <div class="create-image-3">
+      <img src="create-homepage-image-04.png" style="height:40vh">
+    </div>
+    
+    
+    </a>
+    <a class="archive-button" href="input-output-archive.html">
+    
+    	
     	Archive
-    </a>
-    </div>
+    
+  
     <div class="homepage-image-1">
     	<img src="./png/imagebank-04.png" style="height:30vh">
     </div>
@@ -165,9 +446,126 @@ a:hover{
      <div class="homepage-image-3">
     	<img src="./png/imagebank-12.png" style="height:26vh">
     </div>
+    </a>
+
+    <div class="about-button">
+
+      <img src="paper-scrap-01.png" style="height:16vh">
+      
+    </div>
+    <div class="about-button-text">
+      About
+    </div>
+
+     <div class="about">
+
+      While for many artists and designers sketchbooks are personal, and become an ongoing artistic endeavor in their own right, I’ve never been able to see my own sketchbook this way. <br><br>
+
+Maybe this is because I focus much more on college and manipulation, than the quality or even content of the images themselves. Maybe this is because at times I can go months without picking up, or even thinking about the faded and weathered book full of empty pages on my shelf or in the depths of my bookbag. <br><br>
+
+Whatever the case, I realized that while these sketches, collages, and brainstorms represent the final form of an idea to me, maybe they could prove the very opposite to someone else (a means of inspiration?) <br><br>
+
+This website is an effort to both catalogue my sketchbook in a more ‘honest’ way (in context with fluctuation, ephemerality, and chance) and also to inspire newly forming, or even not yet formed, projects/sketches/ideas of other artists and designers. And if all else fails, this website is nothing but the purpose of a sketchbook itself: to escape reality and give time for play. <br><br>
+
+To build your own digital sketchbook pages go to 'create'. To browse exisiting designs go to 'archive'. 
+
+    </div>
+    <div class="back-button">
+      <img src="paper-scrap-05.png" style="height:10vh">
+
+    </div>
+
+    <div class="back-button-text">
+      Back
+    </div>
+
+    
+
+
+      <script>
+        $('.archive-button').hover(function(){
+
+        $('.homepage-image-1').toggleClass('homepage-image-1-rotate');
+        }
+
+        );
+
+      
+      
+        $('.archive-button').hover(function(){
+
+        $('.homepage-image-2').toggleClass('homepage-image-2-rotate');
+           }
+
+          );
+
+         $('.archive-button').hover(function(){
+
+        $('.homepage-image-3').toggleClass('homepage-image-3-rotate');
+           }
+
+          );
+
+         $('.create-button').hover(function(){
+
+        $('.create-image-1').toggleClass('create-image-1-rotate');
+           }
+
+          );
+
+         $('.create-button').hover(function(){
+
+        $('.create-image-2').toggleClass('create-image-2-rotate');
+           }
+
+          );
+
+          $('.create-button').hover(function(){
+
+        $('.create-image-3').toggleClass('create-image-3-rotate');
+           }
+
+          );
+
+          $('.about-button-text').click(function(){
+
+            $('.about').toggleClass('about-active');
+          })
+
+          $('.about-button-text').click(function(){
+
+            $('.back-button').toggleClass('back-button-active');
+          })
+
+          $('.about-button-text').click(function(){
+
+            $('.back-button-text').toggleClass('back-button-text-active');
+          })
+
+          $(document).ready(function(){
+        $(".back-button-text").click(function(){
+            location.reload(true);
+        });
+    });
+
+           $('.create-button').hover(function(){
+
+            $('.underline1').toggleClass('underline1-active');
+          })
+
+           $('.archive-button').hover(function(){
+
+            $('.underline2').toggleClass('underline2-active');
+          })
+
+
+      </script>
+
 
 
     </body>
+    
+    
 </html>
 
 
