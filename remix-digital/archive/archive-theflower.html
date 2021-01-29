@@ -1,0 +1,615 @@
+<!DOCTYPE html><!--document type declaration-->
+<html>
+    <head><!-- a container for metadata -->
+        <meta charset="utf-8"><!--charset: character encoding capable of encoding all characters on the web  -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
+        <title>
+          cosmetics catalogue
+        </title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
+        <meta name="description" content=""><!--keywords/snippet for search engines-->
+        <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+
+   <style type="text/css">
+
+    @font-face{
+         font-family: Kyiv;
+         src: url('KyivTypeTitling-Light3.otf');
+      }
+
+    @font-face{
+
+      font-family:Fraunces;
+      src:url('Fraunces144ptS050-Italic.ttf');
+
+
+    }
+
+    @font-face{
+
+      font-family: Fraunces-Reg;
+      src:url('Fraunces144ptS050-Regular copy.ttf');
+    }
+
+    @font-face{
+
+      font-family:Gangster;
+      src:url('gangstergrotesk-regular copy.otf');
+
+
+    }
+
+    @font-face{
+
+      font-family:Domain;
+      src:url('DomaineDisp-Regular copy.otf');
+    }
+
+    @keyframes entrance{
+
+      0%{
+
+        transform:translateY(1500px)rotate(-90deg);
+       
+        
+      }
+
+     
+
+      
+
+      100%{
+
+        transform:translateY(0px)rotate(-90deg);
+       
+        
+
+
+      }
+    }
+
+    @keyframes exit{
+
+      0%{
+
+        transform:translateY(3000px)rotate(-90deg);
+       
+        
+      }
+
+     
+
+      
+
+      100%{
+
+        transform:translateY(0px)rotate(-90deg);
+       
+        
+
+
+      }
+
+
+    }
+
+    
+
+      body{
+
+        background-color:white;
+
+        overflow:hidden;
+      }
+
+      .title-1{
+
+      position:absolute;
+      width:9vw;
+      
+      margin-top: 74vh;
+      margin-left:4vw;
+      font-family:'Domain';
+    color:black;
+    font-size:8vw;
+    text-align:left;
+    
+   
+
+   /* animation: entrance .5s ease-in  1 normal; */
+     transform:rotate(-90deg);
+
+    
+
+
+  }
+
+  .title-2{
+
+      position:absolute;
+      width:9vw;
+      
+      margin-top: 78vh;
+      margin-left:86vw;
+      font-family:'Domain';
+    color:black;
+    font-size:8vw;
+    text-align:left;
+     
+
+     /*animation: exit 1s ease-in  1 normal; */
+     transform:rotate(-90deg);
+
+
+
+  }
+  .container{
+
+    position:absolute;
+    margin-top:1vh;
+    margin-left:9vw;
+
+    padding-top:.5%;
+    padding-left:2%;
+    padding-right:2%;
+    
+    width:80vw;
+    height:96vh;
+    
+    box-sizing: border-box;
+
+
+  }
+
+  .container-1{
+
+    position:absolute;
+    margin-top:10vh;
+    margin-left:9vw;
+
+    padding-top:5%;
+    padding-left:10%;
+    width:80vw;
+    height:78vh;
+    
+    box-sizing: border-box;
+
+
+  }
+
+  .cover-1{
+    position:absolute;
+    width:50%;
+    height:20%;
+    margin-top:8%;
+    margin-left:14%;
+    width:40%;
+    height:80%;
+    
+  }
+
+  .cover-1-text{
+    position:absolute;
+
+    margin-top:10%;
+    margin-left:5%;
+
+    font-family:'Fraunces';
+    color:red;
+    font-size:5vw;
+    text-align:left;}
+
+
+  
+
+  .cover-2{
+
+    position:absolute;
+    margin-top:8%;
+    margin-left:56%;
+    width:40%;
+    height:80%;
+  
+  }
+
+  .cover-2-text{
+
+    position:absolute;
+
+    margin-top:-8%;
+
+    margin-left:24%;
+
+    font-family:'Fraunces';
+    color:red;
+    font-size:5vw;
+    text-align:left;}
+
+
+  
+
+  .next{
+
+      position:absolute;
+      width:100vw;
+      height:100vh;
+      
+      margin-top: 86vh;
+      margin-left:76vw;
+      font-family:'Domain';
+      color:black;
+      font-size:2vw;
+      text-align:left;
+      text-decoration: none;
+    }
+
+  
+
+  .back{
+
+    position:absolute;
+      width:100vw;
+      height:100vh;
+      
+      margin-top: 86vh;
+      margin-left:20vw;
+      font-family:'Domain';
+      color:black;
+      font-size:2vw;
+      text-align:left;
+
+
+  }
+
+  .left-image{
+
+    position:absolute;
+    width:16.5vw;
+    height:40vh;
+    margin-top:10vh;
+    /*margin-left:20vw;*/
+    /*border:2px black solid;*/
+
+  }
+
+  .right-image{
+
+    position:absolute;
+    width:26vw;
+    height:70vh;
+    padding:1%;
+    margin-top:10vh;
+    margin-left:51.5vw;
+    /*border:2px black solid;*/
+    overflow: scroll;
+    box-sizing: border-box;
+
+
+  }
+
+ /* .right-image:hover{
+
+   opacity:10%;
+
+
+  }*/
+
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+
+  .image-text-left{
+
+
+    position:absolute;
+    width:30vw;
+    height:10vh;
+    /*margin-top:10vh;
+    margin-left:20vw;*/
+    font-family:'Domain';
+    color:black;
+    font-size:3.5vw;
+    text-align:left;
+    
+    
+
+
+  }
+
+  .image-text-left-small{
+
+    position:absolute;
+    width:9vw;
+    height:40vh;
+    margin-top:10vh;
+    margin-left:18vw;
+    font-family:'Domain';
+    color:black;
+    font-size:1.4vw;
+    text-align:left;
+    /*border:2px black solid;*/
+
+
+  }
+
+  .image-text-left-right{
+
+    position:absolute;
+    width:27vw;
+    height:20vh;
+    margin-top:52vh;
+    /*margin-left:20vw;*/
+    font-family:'Domain';
+    color:black;
+    font-size:1.3vw;
+    text-align:left;
+    /*border:2px black solid;*/
+
+
+
+  }
+
+  .image-text-right{
+
+    position:absolute;
+    width:30vw;
+    height:10vh;
+    margin-top:10vh;
+    margin-left:53vw;
+    font-family:'Fraunces';
+    color:black;
+    font-size:8vw;
+    text-align:left;
+    
+
+
+  }
+
+  .flower{
+
+    position:absolute;
+    width:20vw;
+    height:20vh;
+    margin-top:70vh;
+    margin-left:32vw;
+    
+
+
+  }
+
+  .flower-2{
+
+    position:absolute;
+    width:20vw;
+    height:20vh;
+    margin-top:-1vh;
+    margin-left:16vw;
+    transform: rotate(-60deg);
+
+
+  }
+
+  .spread{
+
+    position:absolute;
+    margin-top:10vh;
+    margin-left:20vw;
+    width:57vw;
+    height:69.5vh;
+    /*border:2px black solid;*/
+    overflow:scroll;
+
+
+  }
+
+  .spread-left{
+    position:absolute;
+    width:45%;
+    height:100%;
+    /*background-color:blue;*/
+
+
+
+  }
+
+  .spread-right{
+    position:absolute;
+    width:45%;
+    height:100%;
+    /*background-color:red;*/
+    margin-left:55%;
+
+  }
+
+  .exit{
+
+    position:absolute;
+    margin-top:94vh;
+    margin-left:45vw;
+    width:20vw;
+    height:10vh;
+    font-family: "Domain"
+    font-size:2vw;
+    color:black;
+    text-decoration: none;
+
+
+  }
+
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+
+
+  <img src="blank magazine cover-05-01.png" style="width:100%">
+
+</div>
+
+<a href="archive-p1.html"class="next">
+  BACK </a>
+
+<!-- <div class="back">
+
+    back
+
+  </div> -->
+
+
+<div class="title-1">
+
+  COSMETICS 
+</div>
+
+<div class="title-2">
+  CATALOGUE
+
+
+</div>
+
+
+
+ 
+
+  
+
+<div class="image-text-right">
+
+    
+
+  </div>
+
+
+
+
+  <div class="right-image">
+
+   
+   
+    
+    
+   
+   
+
+
+  </div>
+
+  <div class="flower">
+    
+    <!-- <img src="flower-02.png"style="width:80%"> -->
+  </div>
+
+  <div class="flower-2">
+  <!-- <img src="flower-02.png"style="width:50%"> -->
+  </div>
+
+<div class="spread">
+
+    <div class="spread-left">
+
+                  <div class="image-text-left">
+
+              THE FLOWER
+
+              </div>
+                  
+                 <div class="left-image">
+
+                   <img src="./flower/flower-magnin.png"style="width:100%">
+
+                  </div>
+
+                   <div class="image-text-left-small">
+
+                  FIGURE: <br> WOMAN <br><br>ATTRIBUTES:<br> YOUNG,<br> INNOCENT,<br>PLAYFUL<br><br>COLOR:<br>PINK,RED<br><br>PRODUCT: <br> PERFUME,SOAP<br>   
+
+                   </div>
+
+                   <div class="image-text-left-right"><br>
+               The Flower represents the epitome of white female innocence, purity, and perfection. The women presented in these advertisements are desirable due their virgin-like presence, and are often shown prior to or with the embrace of a male partner. Flowers are also present in the ad, perhaps representative of the woman’s fleeting innocence and beauty. 
+           
+
+              </div>  
+
+              <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+              
+               <img src="./flower/elizabetharden1948.jpg"style="width:100%" onclick="window.open('./flower/elizabetharden1948.jpg');"><br><br>
+               
+                <img src="./flower/SS7731863_7731863_12513240.jpg"style="width:100%"onclick="window.open('./flower/SS7731863_7731863_12513240.jpg');"><br><br>
+                 <img src="./flower/covergirl.jpeg"style="width:100%"onclick="window.open('./flower/covergirl.jpeg');">
+               
+
+         </div>
+              <div class="spread-right">
+
+                
+
+                     
+                    
+                     <img src="./flower/SS7731863_7731863_12534692.jpg"style="width:100%"onclick="window.open('./flower/SS7731863_7731863_12534692.jpg');"><br><br>
+                     <img src="./flower/SS7731863_7731863_12513236.jpg" style="width: 100%"onclick="window.open('./flower/SS7731863_7731863_12513236.jpg');"><br><br>
+                    
+                      <img src="./flower/SS7731863_7731863_12543328 (1).jpg"style="width:100%"onclick="window.open('./flower/SS7731863_7731863_12543328 (1).jpg');"><br><br>
+                      <img src="./flower/SS36138_36138_30517419.jpg"style="width:100%"onclick="window.open('./flower/SS36138_36138_30517419.jpg');">
+                                
+
+              </div>
+  </div>
+
+  <a href="archive.html" class="exit">
+
+    EXIT COLLECTION
+
+  </a>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <!-- woman <br> <br>young <br> innocent <br> playful<br><br>pinks<br>reds<br><br>perfume<br>soap -->
+
+ 
+
+
+     
+
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>

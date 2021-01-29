@@ -1,0 +1,489 @@
+<!DOCTYPE html><!--document type declaration-->
+<html>
+    <head><!-- a container for metadata -->
+        <meta charset="utf-8"><!--charset: character encoding capable of encoding all characters on the web  -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--for browser compatibility: choose rendering engine to view the page in an correct view (for old ver. IE)  -->
+        <title>
+          cosmetics catalogue
+        </title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
+        <meta name="description" content=""><!--keywords/snippet for search engines-->
+        <meta name="viewport" content="width=device-width"><!--the browser will (probably) render the width of the page at the width of its own screen -->
+
+   <style type="text/css">
+
+    @font-face{
+
+      font-family:Domain-Text;
+      src:url('DomaineTextTest-Regular copy.otf');
+    }
+
+  	@font-face{
+         font-family: Kyiv;
+         src: url('KyivTypeTitling-Light3.otf');
+      }
+
+    @font-face{
+
+    	font-family:Fraunces;
+    	src:url('Fraunces144ptS050-Italic.ttf');
+
+
+    }
+
+     @font-face{
+
+      font-family:Domain;
+      src:url('DomaineDisp-Regular copy.otf');
+    }
+
+
+    @keyframes entrance{
+
+      0%{
+
+        transform:translateY(1500px)rotate(-90deg);
+       
+        
+      }
+
+     
+
+      
+
+      100%{
+
+        transform:translateY(0px)rotate(-90deg);
+       
+        
+
+
+      }
+    }
+
+    @keyframes exit{
+
+      0%{
+
+        transform:translateY(4000px)rotate(-90deg);
+       
+        
+      }
+
+     
+      100%{
+
+        transform:translateY(0px)rotate(-90deg);
+       
+      }
+
+
+    }
+
+    
+
+      body{
+
+      	background-color:white;
+
+      	/*overflow:hidden;*/
+      }
+
+     .title-1{
+
+     	position:absolute;
+     	width:9vw;
+     	
+     	margin-top: 74vh;
+     	margin-left:4vw;
+     	font-family:'Domain';
+ 		color:black;
+ 		font-size:8vw;
+ 		text-align:left;
+    
+   
+
+    animation: entrance .5s ease-in  1 normal; 
+     transform:rotate(-90deg);
+
+    
+
+
+  }
+
+ 	.title-2{
+
+     	position:absolute;
+     	width:9vw;
+     	
+     	margin-top: 78vh;
+     	margin-left:86vw;
+     	font-family:'Domain';
+ 		color:black;
+ 		font-size:8vw;
+ 		text-align:left;
+     
+
+     animation: exit 1s ease-in  1 normal; 
+     transform:rotate(-90deg);
+
+
+
+  }
+
+ 	.container{
+
+   
+
+ 		position:absolute;
+    margin-top:.5vh;
+    margin-left:29.5vw;
+
+    padding-top:.5%;
+        
+    width:38vw;
+    height:96vh;
+   
+    
+   
+
+
+ 	}
+
+  .container:hover{
+
+    opacity:0%;
+
+
+  }
+
+  .container-flip{
+
+    
+
+    position:absolute;
+    margin-top:.4vh;
+    margin-left:29.5vw;
+
+    padding-top:.5%;
+        
+    width:38vw;
+    height:96vh;
+    
+    
+    
+
+
+
+  }
+
+  
+  
+
+
+
+ 	.container-1{
+
+ 		position:absolute;
+ 		margin-top:10vh;
+ 		margin-left:9vw;
+
+ 		padding-top:6%;
+ 		
+ 		width:80vw;
+ 		height:78vh;
+ 		
+ 		box-sizing: border-box;
+
+
+ 	}
+
+ 	.cover-1{
+ 		position:absolute;
+ 		width:50%;
+ 		height:20%;
+ 		margin-top:8%;
+ 		margin-left:14%;
+ 		width:40%;
+ 		height:80%;
+ 		
+ 	}
+
+ 	.cover-1-text{
+    position:absolute;
+
+ 		margin-top:10%;
+ 		margin-left:5%;
+
+ 		font-family:'Fraunces';
+ 		color:red;
+ 		font-size:5vw;
+ 		text-align:left;}
+
+
+ 	
+
+ 	.cover-2{
+
+ 		position:absolute;
+ 		margin-top:8%;
+ 		margin-left:56%;
+ 		width:40%;
+ 		height:80%;
+ 	
+ 	}
+
+ 	.cover-2-text{
+
+    position:absolute;
+
+ 		margin-top:-8%;
+
+ 		margin-left:24%;
+
+ 		font-family:'Fraunces';
+ 		color:red;
+ 		font-size:5vw;
+ 		text-align:left;}
+
+
+ 	
+
+  .next{
+
+      position:absolute;
+      width:100vw;
+      height:100vh;
+      
+      margin-top: 86vh;
+      margin-left:76vw;
+      font-family:'Kyiv';
+      color:black;
+      font-size:2vw;
+      text-align:left;
+    }
+
+  
+
+  .back{
+
+    position:absolute;
+      width:100vw;
+      height:100vh;
+      
+      margin-top: 86vh;
+      margin-left:20vw;
+      font-family:'Kyiv';
+      color:black;
+      font-size:2vw;
+      text-align:left;
+
+
+  }
+
+  .left-image{
+
+    position:absolute;
+    width:26vw;
+    height:70vh;
+    margin-top:10vh;
+    margin-left:20vw;
+   /* border:2px black solid;*/
+
+  }
+
+  .right-image{
+
+    position:absolute;
+    width:30vw;
+    height:70vh;
+    margin-top:10vh;
+    margin-left:35vw;
+    
+    
+   /* border:2px black solid;*/
+
+
+  }
+
+ /* .right-image:hover{
+
+   opacity:10%;
+
+
+  }*/
+
+  .center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.right-image:hover{
+
+   opacity:60%;
+
+
+  }
+
+  .left-image:hover{
+
+    opacity:60%;
+  }
+
+  .image-text-left{
+
+
+    position:absolute;
+    width:90%;
+    height:100%;
+    margin-top:-95vh;
+    margin-left:2.3vw;
+    
+    font-family:'Domain-Text';
+    color:black;
+    font-size:1.5vw;
+    text-align:left;
+    cursor: pointer;
+    line-height: 1.5;
+    
+    
+
+
+  }
+
+  .image-text-right{
+
+    position:absolute;
+    width:90%;
+    height:100%;
+    margin-top:-90vh;
+    margin-left:3vw;
+    
+    font-family:'Domain-Text';
+    color:black;
+    font-size:1.5vw;
+    text-align:left;
+    cursor: pointer;
+    line-height: 1.5;
+    
+
+
+  }
+
+
+
+
+
+
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <a href="archive-p1.html" class="container-flip">
+
+<img src="blank magazine cover-04-01.png" style="height:100%" >
+
+<div class="image-text-left">
+  <img src="about.png" style="height:96.5%">
+
+
+  <!-- <u>enter <br> the <br> catalogue</u> -->
+
+  </div>
+
+</a>
+
+
+
+<a href="archive-p1.html"class="container">
+
+
+
+
+	<img src="blank magazine cover-04-0-01.png" style="height:100%" class="center">
+
+  <div class="image-text-right">
+
+ <!--  <img src="blank magazine cover-04-3-01.png" style="height:46%"> -->
+ABOUT THE COLLECTION <br><br>
+ The cosmetics catalogue exists as an archive of open source beauty product advertising of the 20th and 21st centuries. While many view makeup as a tool for self expression to highlight their own unique look and style, the media has historically created a visual language for beauty that is the opposite. Often defining beauty in terms of the feminine, western, cis-gender “woman”, cosmetics advertising has (and continues to) target a selective audience that identifies with these constricting values. <br><br>Repetition and immobility can not only be found within the values and portrayal of the industry, but extend to the recurring content and format of the ads themselves. Throughout my research I have found that the majority of cosmetics/beauty advertisements can be placed into one of the following tropes: the flower, the couture, the nude, and the traveler. 
+
+
+  </div>
+
+</a>
+
+
+
+
+
+
+
+  
+
+<!-- <a href="archive-p2.html"class="next">
+  next </a> -->
+
+<!-- <div class="back">
+
+    back
+
+  </div> -->
+
+
+<div class="title-1">
+
+	COSMETICS 
+</div>
+
+<div class="title-2">
+	CATALOGUE
+
+
+</div>
+
+<!-- <div class="image-text-left">
+
+    the<br> flower
+
+  </div>
+
+<div class="image-text-right">
+
+    the<br> couture
+
+  </div>
+
+
+<div class="left-image">
+
+ 
+
+  <img src="collection-image-01.png"style="height:100%"class="center">
+  </div>
+
+  <div class="right-image">
+<img src="collection-image-03.png"style="width:100%"class="center">
+
+  </div> -->
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</body>
+</html>
